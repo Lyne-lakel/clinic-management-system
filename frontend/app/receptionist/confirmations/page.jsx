@@ -150,7 +150,11 @@ export default function ConfirmationsPage() {
               onClick={() => setFilterPriority(filter.value)}
               className={`px-4 py-2 rounded-lg text-sm min-h-[44px] ${
                 filterPriority === filter.value
+<<<<<<< HEAD
                   ? "bg-[#1d4ed8] text-white"
+=======
+                  ? "bg-blue-600 text-white"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
               }`}
             >
@@ -272,7 +276,11 @@ export default function ConfirmationsPage() {
                 ? "bg-red-500"
                 : toast.type === "warning"
                 ? "bg-yellow-500"
+<<<<<<< HEAD
                 : "bg-[#1d4ed8]"
+=======
+                : "bg-blue-500"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             }`}
           >
             {toast.message}

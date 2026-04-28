@@ -11,8 +11,12 @@
  * 
  * =============================================================================
  */
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { API_RECEPTIONIST } from '@/config/api';
+=======
+
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -39,6 +43,7 @@ const navItems = [
   { href: "/receptionist/settings", label: "Settings", icon: Settings },
 ];
 
+<<<<<<< HEAD
 export default function Sidebar() {
   const pathname = usePathname();
 const [newRequestsCount, setNewRequestsCount] = useState(0);
@@ -67,6 +72,13 @@ useEffect(() => {
   return () => clearInterval(interval);
 }, []);
 
+=======
+// Mock notification count for new requests
+const newRequestsCount = 3;
+
+export default function Sidebar() {
+  const pathname = usePathname();
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
 
   return (
     <>

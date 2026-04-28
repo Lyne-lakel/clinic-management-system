@@ -466,7 +466,11 @@ export default function DoctorDashboard() {
         <div className="bg-card border border-border rounded-lg p-4 shadow-sm">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-blue-100 rounded-lg">
+<<<<<<< HEAD
               <Calendar className="w-5 h-5 text-[#1d4ed8]" />
+=======
+              <Calendar className="w-5 h-5 text-blue-600" />
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Today</p>
@@ -519,10 +523,17 @@ export default function DoctorDashboard() {
                   {/* Left: Time + Patient Info */}
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-1">
+<<<<<<< HEAD
                       <span className="text-lg font-bold text-[#1d4ed8]">{apt.time}</span>
                       <span className="font-semibold text-foreground">{apt.patient}</span>
                       {apt.status === "is_serving" && (
                         <span className="text-xs px-2 py-1 rounded bg-blue-100 text-[#1d4ed8] font-medium">
+=======
+                      <span className="text-lg font-bold text-blue-600">{apt.time}</span>
+                      <span className="font-semibold text-foreground">{apt.patient}</span>
+                      {apt.status === "is_serving" && (
+                        <span className="text-xs px-2 py-1 rounded bg-blue-100 text-blue-700 font-medium">
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                           In Consultation
                         </span>
                       )}
@@ -543,7 +554,11 @@ export default function DoctorDashboard() {
                     <div className="flex items-center gap-2 shrink-0">
                       <button
                         onClick={() => handleStartConsultation(apt)}
+<<<<<<< HEAD
                         className="bg-[#1d4ed8] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#1e40af] flex items-center gap-2 min-h-[40px] transition-colors"
+=======
+                        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 flex items-center gap-2 min-h-[40px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                       >
                         <Play className="w-4 h-4" />
                         Start
@@ -602,7 +617,11 @@ export default function DoctorDashboard() {
                   {/* Basic Info */}
                   <div className="bg-muted/30 rounded-lg p-4">
                     <div className="flex items-center gap-3 mb-4">
+<<<<<<< HEAD
                       <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#1d4ed8] to-purple-600 flex items-center justify-center text-white text-xl font-bold">
+=======
+                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xl font-bold">
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                         {selectedPatient.patient.split(" ").map(n => n[0]).join("")}
                       </div>
                       <div>
@@ -648,7 +667,11 @@ export default function DoctorDashboard() {
                   {/* Appointment History Button */}
                   <button
                     onClick={() => setShowHistory(!showHistory)}
+<<<<<<< HEAD
                     className="w-full bg-[#1d4ed8] text-white px-4 py-3 rounded-lg font-medium hover:bg-[#1e40af] flex items-center justify-center gap-2 transition-colors"
+=======
+                    className="w-full bg-muted text-foreground px-4 py-3 rounded-lg font-medium hover:bg-muted/80 flex items-center justify-center gap-2"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   >
                     <History className="w-5 h-5" />
                     {showHistory ? "Hide" : "View"} Appointment History
@@ -660,7 +683,11 @@ export default function DoctorDashboard() {
                       <h4 className="font-medium text-foreground">Past Visits</h4>
                       {selectedPatient.visitHistory && selectedPatient.visitHistory.length > 0 ? (
                         selectedPatient.visitHistory.map((visit, idx) => (
+<<<<<<< HEAD
                           <div key={idx} className="border-l-2 border-[#1d4ed8] pl-3 py-2">
+=======
+                          <div key={idx} className="border-l-2 border-blue-500 pl-3 py-2">
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                             <div className="flex items-center justify-between">
                               <div>
                                 <p className="text-sm font-medium text-foreground">{visit.date} at {visit.time}</p>
@@ -669,7 +696,11 @@ export default function DoctorDashboard() {
                               {visit.notes && (
                                 <button
                                   onClick={() => alert(`Notes: ${visit.notes}\n\nPrescription: ${visit.prescription || "None"}`)}
+<<<<<<< HEAD
                                   className="p-1 text-[#1d4ed8] hover:bg-blue-50 rounded"
+=======
+                                  className="p-1 text-blue-600 hover:bg-blue-50 rounded"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                                   title="View notes"
                                 >
                                   <FileText className="w-4 h-4" />
@@ -723,7 +754,11 @@ export default function DoctorDashboard() {
                       onChange={(e) => setConsultNotes(e.target.value)}
                       placeholder="Write consultation notes..."
                       rows={4}
+<<<<<<< HEAD
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400"
+=======
+                      className="w-full px-3 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     />
                   </div>
                   
@@ -736,7 +771,11 @@ export default function DoctorDashboard() {
                       value={consultPrescription}
                       onChange={(e) => setConsultPrescription(e.target.value)}
                       rows={5}
+<<<<<<< HEAD
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400 font-mono text-sm"
+=======
+                      className="w-full px-3 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono text-sm"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     />
                   </div>
 
@@ -752,7 +791,11 @@ export default function DoctorDashboard() {
                       value={consultJustification}
                       onChange={(e) => setConsultJustification(e.target.value)}
                       rows={5}
+<<<<<<< HEAD
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400 font-mono text-sm"
+=======
+                      className="w-full px-3 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-purple-500 font-mono text-sm"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     />
                   </div>
 
@@ -770,7 +813,11 @@ export default function DoctorDashboard() {
                           type="date"
                           value={followUpDate}
                           onChange={(e) => setFollowUpDate(e.target.value)}
+<<<<<<< HEAD
                           className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all text-gray-900 bg-white"
+=======
+                          className="flex-1 px-3 py-2 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-amber-500"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                         />
                         <label className="flex items-center gap-2 text-sm text-foreground">
                           <input
@@ -806,7 +853,11 @@ export default function DoctorDashboard() {
                   <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
                     <label className="block text-sm font-medium text-foreground mb-2">
                       <span className="flex items-center gap-1">
+<<<<<<< HEAD
                         <FileUp className="w-4 h-4 text-[#1d4ed8]" />
+=======
+                        <FileUp className="w-4 h-4 text-blue-600" />
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                         Request Documents from Patient
                       </span>
                     </label>
@@ -815,7 +866,11 @@ export default function DoctorDashboard() {
                       onChange={(e) => setRequestedDocs(e.target.value)}
                       placeholder="Enter the documents you need from the patient (e.g., blood test results, X-ray, prescription from another doctor...)"
                       rows={3}
+<<<<<<< HEAD
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400 text-sm"
+=======
+                      className="w-full px-3 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     />
                     <p className="text-xs text-muted-foreground mt-1">This will appear on the printed prescription</p>
                   </div>
@@ -834,7 +889,11 @@ export default function DoctorDashboard() {
               </button>
               <button
                 onClick={handlePrintPrescription}
+<<<<<<< HEAD
                 className="bg-[#1d4ed8] text-white px-4 py-2.5 rounded-lg font-medium hover:bg-[#1e40af] flex items-center justify-center gap-2 min-h-[44px] transition-colors"
+=======
+                className="bg-blue-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-blue-700 flex items-center justify-center gap-2 min-h-[44px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               >
                 <Printer className="w-5 h-5" />
                 Print Prescription
@@ -858,12 +917,20 @@ export default function DoctorDashboard() {
             key={toast.id}
             className={`px-4 py-3 rounded-lg shadow text-white ${
               toast.type === "success"
+<<<<<<< HEAD
                 ? "bg-emerald-500"
+=======
+                ? "bg-green-500"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 : toast.type === "error"
                 ? "bg-red-500"
                 : toast.type === "warning"
                 ? "bg-yellow-500"
+<<<<<<< HEAD
                 : "bg-[#1d4ed8]"
+=======
+                : "bg-blue-500"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             }`}
           >
             {toast.message}

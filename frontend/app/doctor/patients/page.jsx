@@ -266,7 +266,11 @@ export default function DoctorPatients() {
             onClick={() => setFilter(opt)}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors min-h-[44px] ${
               filter === opt
+<<<<<<< HEAD
                 ? "bg-[#1d4ed8] text-white shadow-sm"
+=======
+                ? "bg-blue-600 text-white"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 : "bg-muted text-muted-foreground hover:bg-muted/80"
             }`}
           >
@@ -283,7 +287,11 @@ export default function DoctorPatients() {
           placeholder="Search patients by name..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+<<<<<<< HEAD
           className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400 min-h-[44px]"
+=======
+          className="w-full pl-10 pr-4 py-2.5 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[44px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
         />
       </div>
 
@@ -296,7 +304,11 @@ export default function DoctorPatients() {
           >
             <div className="flex items-start gap-3 mb-3">
               <div className="p-2 bg-blue-100 rounded-full dark:bg-blue-900/30">
+<<<<<<< HEAD
                 <User className="w-5 h-5 text-[#1d4ed8] dark:text-[#1d4ed8]" />
+=======
+                <User className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="font-semibold text-foreground truncate">{patient.name}</h3>
@@ -316,7 +328,11 @@ export default function DoctorPatients() {
             <button
               onClick={() => handleViewProfile(patient)}
               aria-label={`View profile of ${patient.name}`}
+<<<<<<< HEAD
               className="w-full bg-[#1d4ed8] text-white px-4 py-3 rounded-lg font-medium hover:bg-[#1e40af] min-h-[44px] transition-colors"
+=======
+              className="w-full bg-blue-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-blue-700 min-h-[44px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               View Profile
             </button>
@@ -362,7 +378,11 @@ export default function DoctorPatients() {
                   <button
                     onClick={() => setShowAddAllergy(true)}
                     aria-label="Add allergy"
+<<<<<<< HEAD
                     className="text-[#1d4ed8] hover:text-[#1e40af] p-1 flex items-center gap-1 text-sm font-medium"
+=======
+                    className="text-blue-600 hover:text-blue-700 p-1 flex items-center gap-1 text-sm"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   >
                     <Plus className="w-4 h-4" />
                     Add
@@ -377,7 +397,11 @@ export default function DoctorPatients() {
                       value={newAllergy}
                       onChange={(e) => setNewAllergy(e.target.value)}
                       placeholder="Enter allergy..."
+<<<<<<< HEAD
                       className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white"
+=======
+                      className="flex-1 px-3 py-2 bg-background border border-border rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     />
                     <button
                       onClick={handleAddAllergy}
@@ -389,7 +413,11 @@ export default function DoctorPatients() {
                     <button
                       onClick={() => { setShowAddAllergy(false); setNewAllergy(""); }}
                       aria-label="Cancel"
+<<<<<<< HEAD
                       className="bg-red-600 text-white px-4 py-3 rounded-lg hover:bg-red-700 text-sm min-h-[40px] font-medium transition-colors"
+=======
+                      className="bg-gray-200 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 text-sm min-h-[40px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     >
                       Cancel
                     </button>
@@ -430,7 +458,11 @@ export default function DoctorPatients() {
                   <button
                     onClick={() => setShowAddCondition(true)}
                     aria-label="Add condition"
+<<<<<<< HEAD
                     className="text-[#1d4ed8] hover:text-[#1e40af] p-1 flex items-center gap-1 text-sm font-medium"
+=======
+                    className="text-blue-600 hover:text-blue-700 p-1 flex items-center gap-1 text-sm"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   >
                     <Plus className="w-4 h-4" />
                     Add
@@ -445,7 +477,11 @@ export default function DoctorPatients() {
                       value={newCondition}
                       onChange={(e) => setNewCondition(e.target.value)}
                       placeholder="Enter condition..."
+<<<<<<< HEAD
                       className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white"
+=======
+                      className="flex-1 px-3 py-2 bg-background border border-border rounded-lg text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     />
                     <button
                       onClick={handleAddCondition}
@@ -457,7 +493,11 @@ export default function DoctorPatients() {
                     <button
                       onClick={() => { setShowAddCondition(false); setNewCondition(""); }}
                       aria-label="Cancel"
+<<<<<<< HEAD
                       className="bg-red-600 text-white px-4 py-3 rounded-lg hover:bg-red-700 text-sm min-h-[40px] font-medium transition-colors"
+=======
+                      className="bg-gray-200 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 text-sm min-h-[40px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     >
                       Cancel
                     </button>
@@ -493,7 +533,11 @@ export default function DoctorPatients() {
                   --------------------------------------------------------- */}
               <div>
                 <h3 className="font-semibold text-foreground flex items-center gap-2 mb-3">
+<<<<<<< HEAD
                   <Calendar className="w-5 h-5 text-[#1d4ed8]" />
+=======
+                  <Calendar className="w-5 h-5 text-blue-600" />
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   Visit History
                 </h3>
                 <div className="space-y-2">
@@ -517,7 +561,11 @@ export default function DoctorPatients() {
                   --------------------------------------------------------- */}
               <div>
                 <h3 className="font-semibold text-foreground flex items-center gap-2 mb-3">
+<<<<<<< HEAD
                   <FileText className="w-5 h-5 text-[#1d4ed8]" />
+=======
+                  <FileText className="w-5 h-5 text-blue-600" />
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   Medical Records
                 </h3>
                 <div className="space-y-2">
@@ -528,7 +576,11 @@ export default function DoctorPatients() {
                         <span className="text-xs text-muted-foreground">{record.date}</span>
                       </div>
                       <div className="flex items-center gap-2">
+<<<<<<< HEAD
                         <span className="text-xs bg-blue-100 text-[#1d4ed8] px-2 py-0.5 rounded dark:bg-blue-900/30 dark:text-blue-400">
+=======
+                        <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded dark:bg-blue-900/30 dark:text-blue-400">
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                           {record.type}
                         </span>
                         <span className="text-sm text-muted-foreground">{record.notes}</span>

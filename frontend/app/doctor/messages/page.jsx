@@ -129,7 +129,11 @@ export default function DoctorMessages() {
               <div
                 className={`max-w-[85%] md:max-w-[70%] rounded-2xl px-4 py-3 ${
                   msg.sender === "doctor"
+<<<<<<< HEAD
                     ? "bg-[#1d4ed8] text-white"
+=======
+                    ? "bg-blue-600 text-white"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     : "bg-muted text-foreground"
                 }`}
               >
@@ -163,13 +167,21 @@ export default function DoctorMessages() {
               onChange={(e) => setNewMessage(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Type your message..."
+<<<<<<< HEAD
               className="flex-1 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400 min-h-[48px] text-base"
+=======
+              className="flex-1 px-4 py-3 bg-muted border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[48px] text-base"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             />
             <button
               onClick={handleSend}
               disabled={!newMessage.trim()}
               aria-label="Send message"
+<<<<<<< HEAD
               className="bg-[#1d4ed8] text-white px-5 py-3 rounded-xl font-medium hover:bg-[#1e40af] disabled:bg-gray-300 disabled:cursor-not-allowed min-h-[48px] min-w-[48px] flex items-center justify-center transition-colors"
+=======
+              className="bg-blue-600 text-white px-5 py-3 rounded-xl font-medium hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed min-h-[48px] min-w-[48px] flex items-center justify-center transition-colors"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               <Send className="w-5 h-5" />
             </button>

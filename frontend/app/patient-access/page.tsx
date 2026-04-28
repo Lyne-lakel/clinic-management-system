@@ -180,10 +180,18 @@ export default function PatientAccessPage() {
                 setRequestStatus("idle");
                 setConfirmationData(null);
               }}
+<<<<<<< HEAD
               className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${patientType === "old"
                   ? "bg-[#1d4ed8] text-white shadow-lg"
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
                 }`}
+=======
+              className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${
+                patientType === "old"
+                  ? "bg-primary text-primary-foreground shadow-lg"
+                  : "bg-muted text-muted-foreground hover:bg-muted/80"
+              }`}
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               Old Patient
             </button>
@@ -193,10 +201,18 @@ export default function PatientAccessPage() {
                 setRequestStatus("idle");
                 setConfirmationData(null);
               }}
+<<<<<<< HEAD
               className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${patientType === "new"
                   ? "bg-[#1d4ed8] text-white shadow-lg"
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
                 }`}
+=======
+              className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${
+                patientType === "new"
+                  ? "bg-secondary text-secondary-foreground shadow-lg"
+                  : "bg-muted text-muted-foreground hover:bg-muted/80"
+              }`}
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               New Patient
             </button>
@@ -215,14 +231,22 @@ export default function PatientAccessPage() {
                     value={fileNumber}
                     onChange={(e) => setFileNumber(e.target.value)}
                     placeholder="Enter your file number"
+<<<<<<< HEAD
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8]"
+=======
+                    className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     disabled={requestStatus === "pending"}
                   />
                 </div>
                 <Button
                   type="submit"
                   size="lg"
+<<<<<<< HEAD
                   className="w-full bg-[#1d4ed8] hover:bg-[#1e40af] text-white font-semibold rounded-lg px-4 py-3 transition-colors h-auto"
+=======
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   disabled={requestStatus === "pending" || !fileNumber.trim()}
                 >
                   {requestStatus === "pending" ? (
@@ -246,7 +270,11 @@ export default function PatientAccessPage() {
                     type="text"
                     value={clinic.name}
                     disabled
+<<<<<<< HEAD
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-muted text-foreground focus:outline-none"
+=======
+                    className="w-full px-4 py-2.5 rounded-lg border border-border bg-muted text-foreground focus:outline-none"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   />
                 </div>
 
@@ -262,7 +290,11 @@ export default function PatientAccessPage() {
                       setSelectedDate("");
                       setSelectedTime("");
                     }}
+<<<<<<< HEAD
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white"
+=======
+                    className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     disabled={requestStatus === "pending"}
                   >
                     <option value="">Choose a doctor...</option>
@@ -289,10 +321,18 @@ export default function PatientAccessPage() {
                             setSelectedTime("");
                           }}
                           disabled={requestStatus === "pending"}
+<<<<<<< HEAD
                           className={`py-3 px-2 rounded-lg text-sm font-medium transition-all ${selectedDate === d.date
                               ? "bg-[#1d4ed8] text-white"
                               : "bg-muted text-muted-foreground hover:bg-muted/80"
                             }`}
+=======
+                          className={`py-2.5 px-2 rounded-lg text-sm font-medium transition-all ${
+                            selectedDate === d.date
+                              ? "bg-secondary text-secondary-foreground"
+                              : "bg-muted text-muted-foreground hover:bg-muted/80"
+                          }`}
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                         >
                           {d.label}
                         </button>
@@ -313,12 +353,22 @@ export default function PatientAccessPage() {
                           key={slot}
                           onClick={() => setSelectedTime(slot)}
                           disabled={bookedSlots.includes(slot) || requestStatus === "pending"}
+<<<<<<< HEAD
                           className={`py-3 px-2 rounded-lg text-sm font-medium transition-all ${selectedTime === slot
                               ? "bg-[#1d4ed8] text-white"
                               : bookedSlots.includes(slot)
                                 ? "bg-muted text-muted-foreground cursor-not-allowed opacity-50"
                                 : "bg-muted text-muted-foreground hover:bg-muted/80"
                             }`}
+=======
+                          className={`py-2.5 px-2 rounded-lg text-sm font-medium transition-all ${
+                            selectedTime === slot
+                              ? "bg-secondary text-secondary-foreground"
+                              : bookedSlots.includes(slot)
+                              ? "bg-muted text-muted-foreground cursor-not-allowed opacity-50"
+                              : "bg-muted text-muted-foreground hover:bg-muted/80"
+                          }`}
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                         >
                           {slot}
                         </button>
@@ -338,7 +388,11 @@ export default function PatientAccessPage() {
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       placeholder="Your full name"
+<<<<<<< HEAD
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400"
+=======
+                      className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                       disabled={requestStatus === "pending"}
                     />
                   </div>
@@ -351,7 +405,11 @@ export default function PatientAccessPage() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+213 XX XX XX XX"
+<<<<<<< HEAD
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400"
+=======
+                      className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                       disabled={requestStatus === "pending"}
                     />
                   </div>
@@ -364,7 +422,11 @@ export default function PatientAccessPage() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="your@email.com"
+<<<<<<< HEAD
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400"
+=======
+                      className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                       disabled={requestStatus === "pending"}
                     />
                   </div>
@@ -377,7 +439,11 @@ export default function PatientAccessPage() {
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                       placeholder="Any additional information for the doctor"
                       rows={3}
+<<<<<<< HEAD
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400"
+=======
+                      className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                       disabled={requestStatus === "pending"}
                     />
                   </div>
@@ -386,7 +452,11 @@ export default function PatientAccessPage() {
                 <Button
                   type="submit"
                   size="lg"
+<<<<<<< HEAD
                   className="w-full bg-[#1d4ed8] hover:bg-[#1e40af] text-white font-semibold rounded-lg px-4 py-3 transition-colors h-auto"
+=======
+                  className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   disabled={
                     requestStatus === "pending" ||
                     !selectedDoctor ||

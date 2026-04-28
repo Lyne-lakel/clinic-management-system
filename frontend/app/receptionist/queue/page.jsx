@@ -35,10 +35,39 @@
 
 "use client";
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { UserCheck, UserX, ChevronUp, Plus } from "lucide-react";
 import SmartBookingModal from "@/components/SmartBookingModal";
 import { API_RECEPTIONIST } from "@/config/api";
+=======
+import { useState } from "react";
+import { UserCheck, UserX, ChevronUp, Plus } from "lucide-react";
+
+// -----------------------------------------------------------------------------
+// MOCK DATA: INITIAL QUEUE
+// -----------------------------------------------------------------------------
+// Queue ordered by appointment time, not arrival order
+// Status can be: "in-room", "present", "absent", "skipped", "completed"
+const initialQueue = [
+  { id: 1, ticketNum: 12, name: "Ahmed Benali", appointmentTime: "09:00", status: "in-room" },
+  { id: 2, ticketNum: 13, name: "Fatima Zohra", appointmentTime: "09:30", status: "present" },
+  { id: 3, ticketNum: 14, name: "Karim Said", appointmentTime: "10:00", status: "present" },
+  { id: 4, ticketNum: 15, name: "Lydia Mansour", appointmentTime: "10:30", status: "absent" },
+  { id: 5, ticketNum: 16, name: "Omar Khelif", appointmentTime: "11:00", status: "absent" },
+  { id: 6, ticketNum: 17, name: "Samira Hadj", appointmentTime: "11:30", status: "absent" },
+];
+
+// -----------------------------------------------------------------------------
+// MOCK DATA: AVAILABLE PATIENTS
+// -----------------------------------------------------------------------------
+// Patients that can be added to queue (e.g., walk-ins)
+const availablePatients = [
+  { id: "P001", name: "Yacine Bouali" },
+  { id: "P002", name: "Amina Cherif" },
+  { id: "P003", name: "Rachid Taleb" },
+];
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
 
 // -----------------------------------------------------------------------------
 // HELPER FUNCTION: GET STATUS BADGE STYLING
@@ -65,6 +94,7 @@ export default function QueuePage() {
   // ---------------------------------------------------------------------------
   // STATE MANAGEMENT
   // ---------------------------------------------------------------------------
+<<<<<<< HEAD
   const [queue, setQueue] = useState([]);      // Main queue array
   const [doctors, setDoctors] = useState([]);  // List of available doctors
   const [patients, setPatients] = useState([]); // List of available patients
@@ -130,6 +160,15 @@ export default function QueuePage() {
   }, []);  // Run only once on mount
 
   // ---------------------------------------------------------------------------
+=======
+  const [queue, setQueue] = useState(initialQueue);      // Main queue array
+  const [showAddModal, setShowAddModal] = useState(false);  // Add patient modal visibility
+  const [selectedPatient, setSelectedPatient] = useState("");  // Selected patient in modal
+  const [appointmentTime, setAppointmentTime] = useState("12:00");  // Time input in modal
+  const [toasts, setToasts] = useState([]);              // Toast notifications
+
+  // ---------------------------------------------------------------------------
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   // TOAST NOTIFICATION SYSTEM
   // ---------------------------------------------------------------------------
   const showToast = (message, type = "success") => {
@@ -140,6 +179,7 @@ export default function QueuePage() {
     }, 3000);
   };
 
+<<<<<<< HEAD
   const playNotification = () => {
     try {
       new Audio('/sounds/success.mp3').play();
@@ -148,6 +188,8 @@ export default function QueuePage() {
     }
   };
 
+=======
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   // ---------------------------------------------------------------------------
   // COMPUTED VALUES (QUEUE STATS)
   // ---------------------------------------------------------------------------
@@ -159,6 +201,7 @@ export default function QueuePage() {
   const nextInQueue = presentPatients[0];
   // Count of waiting patients
   const waitingCount = presentPatients.length;
+<<<<<<< HEAD
 
   // If loading, show a loading state
   if (loading) {
@@ -213,12 +256,27 @@ export default function QueuePage() {
       console.error("[Queue] Error marking present:", err);
       showToast(err.message, "error");
     }
+=======
+  // Next ticket number to assign
+  const nextTicket = queue.length > 0 ? Math.max(...queue.map((q) => q.ticketNum)) + 1 : 1;
+
+  // ---------------------------------------------------------------------------
+  // ACTION: MARK PATIENT AS PRESENT
+  // ---------------------------------------------------------------------------
+  // Called when a patient arrives at the clinic
+  function markPresent(id) {
+    setQueue((prev) =>
+      prev.map((q) => (q.id === id ? { ...q, status: "present" } : q))
+    );
+    showToast("Patient marked as present");
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   }
 
   // ---------------------------------------------------------------------------
   // ACTION: MARK PATIENT AS SKIPPED
   // ---------------------------------------------------------------------------
   // Called when a patient misses their turn
+<<<<<<< HEAD
   async function markAbsent(id) {
     try {
       const response = await fetch(`${API_RECEPTIONIST}/appointments/${id}/status`, {
@@ -239,12 +297,20 @@ export default function QueuePage() {
       console.error("[Queue] Error marking absent:", err);
       showToast(err.message, "error");
     }
+=======
+  function markAbsent(id) {
+    setQueue((prev) =>
+      prev.map((q) => (q.id === id ? { ...q, status: "skipped" } : q))
+    );
+    showToast("Patient skipped", "warning");
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   }
 
   // ---------------------------------------------------------------------------
   // ACTION: CALL NEXT PATIENT
   // ---------------------------------------------------------------------------
   // Moves current patient to completed, calls next present patient
+<<<<<<< HEAD
   async function callNext() {
     const currentPatient = queue.find(q => q.status === "in-room");
     if (!currentPatient) {
@@ -280,12 +346,34 @@ export default function QueuePage() {
       console.error("[Queue] Error calling next:", err);
       showToast(err.message, "error");
     }
+=======
+  function callNext() {
+    setQueue((prev) => {
+      // First, mark current in-room patient as completed
+      const updated = prev.map((q) => {
+        if (q.status === "in-room") {
+          return { ...q, status: "completed" };
+        }
+        return q;
+      });
+
+      // Then, find first present patient and set them to in-room
+      const firstPresentIndex = updated.findIndex((q) => q.status === "present");
+      if (firstPresentIndex !== -1) {
+        updated[firstPresentIndex] = { ...updated[firstPresentIndex], status: "in-room" };
+      }
+
+      return updated;
+    });
+    showToast("Calling next patient", "info");
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   }
 
   // ---------------------------------------------------------------------------
   // ACTION: SKIP CURRENT PATIENT
   // ---------------------------------------------------------------------------
   // Marks current patient as skipped, calls next present patient
+<<<<<<< HEAD
   async function skipCurrent() {
     const currentPatient = queue.find(q => q.status === "in-room");
     if (!currentPatient) {
@@ -320,6 +408,27 @@ export default function QueuePage() {
       console.error("[Queue] Error skipping patient:", err);
       showToast(err.message, "error");
     }
+=======
+  function skipCurrent() {
+    setQueue((prev) => {
+      // Mark current in-room patient as skipped
+      const updated = prev.map((q) => {
+        if (q.status === "in-room") {
+          return { ...q, status: "skipped" };
+        }
+        return q;
+      });
+
+      // Find next present patient and set them to in-room
+      const firstPresentIndex = updated.findIndex((q) => q.status === "present");
+      if (firstPresentIndex !== -1) {
+        updated[firstPresentIndex] = { ...updated[firstPresentIndex], status: "in-room" };
+      }
+
+      return updated;
+    });
+    showToast("Patient skipped", "warning");
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   }
 
   // ---------------------------------------------------------------------------
@@ -346,6 +455,7 @@ export default function QueuePage() {
   }
 
   // ---------------------------------------------------------------------------
+<<<<<<< HEAD
   // ACTION: ADD NEW PATIENT TO QUEUE (via Smart Booking)
   // ---------------------------------------------------------------------------
   function handleOpenSmartBooking() {
@@ -371,6 +481,38 @@ export default function QueuePage() {
     
     showToast("Appointment booked successfully");
     setShowBookingModal(false);
+=======
+  // ACTION: ADD NEW PATIENT TO QUEUE
+  // ---------------------------------------------------------------------------
+  // Adds a walk-in or new patient to the queue in time-sorted order
+  function addToQueue() {
+    if (!selectedPatient) return;
+
+    // Find patient details
+    const patient = availablePatients.find((p) => p.id === selectedPatient);
+    if (!patient) return;
+
+    // Create new queue entry
+    const newEntry = {
+      id: Date.now(),
+      ticketNum: nextTicket,
+      name: patient.name,
+      appointmentTime: appointmentTime,
+      status: "absent",  // New patients start as absent until they arrive
+    };
+
+    // Insert in sorted order by appointment time
+    setQueue((prev) => {
+      const newQueue = [...prev, newEntry];
+      return newQueue.sort((a, b) => a.appointmentTime.localeCompare(b.appointmentTime));
+    });
+
+    showToast("Patient added to queue");
+    // Reset modal state
+    setSelectedPatient("");
+    setAppointmentTime("12:00");
+    setShowAddModal(false);
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   }
 
   // ---------------------------------------------------------------------------
@@ -397,7 +539,11 @@ export default function QueuePage() {
           Large display showing current status - positioned at TOP for visibility
           Shows: Now Serving | Next | Waiting Count
           ===================================================================== */}
+<<<<<<< HEAD
       <div className="bg-[#1d4ed8] text-white rounded-lg p-6">
+=======
+      <div className="bg-blue-600 text-white rounded-lg p-6">
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
         <div className="grid grid-cols-3 gap-4 text-center">
           {/* Now Serving */}
           <div>
@@ -437,11 +583,19 @@ export default function QueuePage() {
 
             {/* Add Patient Button */}
             <button
+<<<<<<< HEAD
               onClick={handleOpenSmartBooking}
               className="w-full px-4 py-3 bg-[#1d4ed8] text-white rounded-lg hover:bg-[#1e40af] min-h-[44px] flex items-center justify-center gap-2 transition-colors"
             >
               <Plus className="w-5 h-5" />
               Book New Appointment
+=======
+              onClick={() => setShowAddModal(true)}
+              className="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 min-h-[44px] flex items-center justify-center gap-2"
+            >
+              <Plus className="w-5 h-5" />
+              Add Patient to Queue
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             </button>
 
             {/* Call Next Button */}
@@ -564,7 +718,11 @@ export default function QueuePage() {
                             {item.status === "present" && (
                               <button
                                 onClick={() => moveUp(item.id)}
+<<<<<<< HEAD
                                 className="px-3 py-1 bg-[#1d4ed8] text-white rounded text-sm hover:bg-[#1e40af] min-h-[44px] flex items-center gap-1 transition-colors"
+=======
+                                className="px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700 min-h-[44px] flex items-center gap-1"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                                 aria-label={`Move ${item.name} up`}
                               >
                                 <ChevronUp className="w-4 h-4" />
@@ -573,7 +731,11 @@ export default function QueuePage() {
                             )}
                             {/* Show status text for in-room patients */}
                             {item.status === "in-room" && (
+<<<<<<< HEAD
                               <span className="text-sm text-[#1d4ed8] font-medium">Currently serving</span>
+=======
+                              <span className="text-sm text-blue-600 font-medium">Currently serving</span>
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                             )}
                           </div>
                         </td>
@@ -588,6 +750,7 @@ export default function QueuePage() {
       </div>
 
       {/* =====================================================================
+<<<<<<< HEAD
           SMART BOOKING MODAL
           Allows booking appointments with real-time availability checking
           ===================================================================== */}
@@ -644,6 +807,62 @@ export default function QueuePage() {
               >
                 Cancel
               </button>
+=======
+          ADD PATIENT MODAL
+          Allows adding walk-in patients to the queue
+          ===================================================================== */}
+      {showAddModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-card border border-border rounded-lg p-6 w-full max-w-md">
+            <h3 className="text-lg font-semibold text-foreground mb-4">Add Patient to Queue</h3>
+
+            <div className="space-y-4">
+              {/* Patient Selection Dropdown */}
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1">Select Patient</label>
+                <select
+                  value={selectedPatient}
+                  onChange={(e) => setSelectedPatient(e.target.value)}
+                  className="w-full px-4 py-2 border border-input rounded-lg bg-background min-h-[44px]"
+                >
+                  <option value="">Choose a patient...</option>
+                  {availablePatients.map((p) => (
+                    <option key={p.id} value={p.id}>{p.name} ({p.id})</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Time Input */}
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1">Appointment Time</label>
+                <input
+                  type="time"
+                  value={appointmentTime}
+                  onChange={(e) => setAppointmentTime(e.target.value)}
+                  className="w-full px-4 py-2 border border-input rounded-lg bg-background min-h-[44px]"
+                />
+              </div>
+
+              {/* Next Ticket Preview */}
+              <p className="text-sm text-muted-foreground">Ticket number: #{nextTicket}</p>
+
+              {/* Modal Action Buttons */}
+              <div className="flex gap-3">
+                <button
+                  onClick={addToQueue}
+                  disabled={!selectedPatient}
+                  className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 min-h-[44px]"
+                >
+                  Add to Queue
+                </button>
+                <button
+                  onClick={() => setShowAddModal(false)}
+                  className="flex-1 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 min-h-[44px]"
+                >
+                  Cancel
+                </button>
+              </div>
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             </div>
           </div>
         </div>
@@ -664,7 +883,11 @@ export default function QueuePage() {
                 ? "bg-red-500"
                 : toast.type === "warning"
                 ? "bg-yellow-500"
+<<<<<<< HEAD
                 : "bg-[#1d4ed8]"
+=======
+                : "bg-blue-500"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             }`}
           >
             {toast.message}

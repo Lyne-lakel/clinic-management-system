@@ -1,9 +1,14 @@
 "use client";
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { Upload, Search, X, FileText } from "lucide-react";
 import { API_RECEPTIONIST } from "@/config/api";
 import { getPatientFullName, getPatientId } from "@/utils/patientFilters";
+=======
+import { useState } from "react";
+import { Upload, Search, X, FileText } from "lucide-react";
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
 
 const documentTypes = [
   { value: "lab", label: "Lab Report" },
@@ -13,6 +18,17 @@ const documentTypes = [
   { value: "insurance", label: "Insurance Document" },
 ];
 
+<<<<<<< HEAD
+=======
+const mockPatients = [
+  { id: "P001", name: "Ahmed Benali" },
+  { id: "P002", name: "Fatima Zohra" },
+  { id: "P003", name: "Karim Said" },
+  { id: "P004", name: "Lydia Mansour" },
+  { id: "P005", name: "Omar Khelif" },
+];
+
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
 const initialUploads = [
   { id: 1, fileName: "blood_test_results.pdf", patient: "Ahmed Benali", patientId: "P001", date: "2025-04-18" },
   { id: 2, fileName: "xray_chest.jpg", patient: "Karim Said", patientId: "P003", date: "2025-04-18" },
@@ -21,7 +37,10 @@ const initialUploads = [
 ];
 
 export default function DocumentsPage() {
+<<<<<<< HEAD
   const [dbPatients, setDbPatients] = useState([]);
+=======
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   const [uploads, setUploads] = useState(initialUploads);
   const [patientSearch, setPatientSearch] = useState("");
   const [selectedPatient, setSelectedPatient] = useState(null);
@@ -36,6 +55,7 @@ export default function DocumentsPage() {
   const [isUploading, setIsUploading] = useState(false);
   const [toasts, setToasts] = useState([]);
 
+<<<<<<< HEAD
   useEffect(() => {
     const fetchPatients = async () => {
       try {
@@ -58,13 +78,21 @@ export default function DocumentsPage() {
 
   const showToast = (message, type = "success") => {
     const id = Date.now() + Math.random();
+=======
+  const showToast = (message, type = "success") => {
+    const id = Date.now();
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
     setToasts(prev => [...prev, { id, message, type }]);
     setTimeout(() => {
       setToasts(prev => prev.filter(t => t.id !== id));
     }, 3000);
   };
 
+<<<<<<< HEAD
   const filteredPatients = dbPatients.filter(
+=======
+  const filteredPatients = mockPatients.filter(
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
     (p) =>
       p.name.toLowerCase().includes(patientSearch.toLowerCase()) ||
       p.id.toLowerCase().includes(patientSearch.toLowerCase())
@@ -189,10 +217,17 @@ export default function DocumentsPage() {
                 <label htmlFor="file-upload" className="cursor-pointer block">
                   {selectedFile ? (
                     <div className="space-y-2">
+<<<<<<< HEAD
                       <FileText className="w-10 h-10 mx-auto text-[#1d4ed8]" />
                       <p className="text-foreground font-medium">{selectedFile.name}</p>
                       <p className="text-sm text-muted-foreground">{(selectedFile.size / 1024).toFixed(1)} KB</p>
                       <p className="text-sm text-[#1d4ed8]">Click to change file</p>
+=======
+                      <FileText className="w-10 h-10 mx-auto text-blue-600" />
+                      <p className="text-foreground font-medium">{selectedFile.name}</p>
+                      <p className="text-sm text-muted-foreground">{(selectedFile.size / 1024).toFixed(1)} KB</p>
+                      <p className="text-sm text-blue-600">Click to change file</p>
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     </div>
                   ) : (
                     <div className="space-y-2">
@@ -276,7 +311,11 @@ export default function DocumentsPage() {
                 </div>
                 <div className="w-full bg-muted rounded-full h-2">
                   <div
+<<<<<<< HEAD
                     className="bg-[#1d4ed8] h-2 rounded-full transition-all duration-200"
+=======
+                    className="bg-blue-600 h-2 rounded-full transition-all duration-200"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     style={{ width: `${uploadProgress}%` }}
                   />
                 </div>
@@ -286,7 +325,11 @@ export default function DocumentsPage() {
             <button
               onClick={handleUpload}
               disabled={!selectedPatient || !selectedFile || !docTitle || isUploading}
+<<<<<<< HEAD
               className="w-full px-4 py-3 bg-[#1d4ed8] text-white rounded-lg hover:bg-[#1d4ed8] disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] font-medium flex items-center justify-center gap-2"
+=======
+              className="w-full px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px] font-medium flex items-center justify-center gap-2"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               <Upload className="w-5 h-5" />
               {isUploading ? "Uploading..." : "Upload to Patient Profile"}
@@ -314,7 +357,11 @@ export default function DocumentsPage() {
                 <tr key={upload.id} className="border-t border-border">
                   <td className="p-3">
                     <div className="flex items-center gap-2">
+<<<<<<< HEAD
                       <FileText className="w-4 h-4 text-[#1d4ed8]" />
+=======
+                      <FileText className="w-4 h-4 text-blue-600" />
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                       <span className="text-foreground">{upload.fileName}</span>
                     </div>
                   </td>
@@ -342,7 +389,11 @@ export default function DocumentsPage() {
                 ? "bg-red-500"
                 : toast.type === "warning"
                 ? "bg-yellow-500"
+<<<<<<< HEAD
                 : "bg-[#1d4ed8]"
+=======
+                : "bg-blue-500"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             }`}
           >
             {toast.message}

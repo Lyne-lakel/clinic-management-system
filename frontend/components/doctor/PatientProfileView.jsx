@@ -127,7 +127,11 @@ export default function PatientProfileView({
           <button
             onClick={() => handleStartEdit(field, value)}
             aria-label={`Edit ${label.toLowerCase()}`}
+<<<<<<< HEAD
             className="text-[#1d4ed8] hover:text-[#1e40af] p-1 transition-colors"
+=======
+            className="text-blue-600 hover:text-blue-700 p-1"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
           >
             <Edit2 className="w-4 h-4" />
           </button>
@@ -141,7 +145,11 @@ export default function PatientProfileView({
             type="text"
             value={editValue}
             onChange={(e) => setEditValue(e.target.value)}
+<<<<<<< HEAD
             className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white"
+=======
+            className="flex-1 px-3 py-2 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
           />
           <button
             onClick={handleSaveEdit}
@@ -153,7 +161,11 @@ export default function PatientProfileView({
           <button
             onClick={handleCancelEdit}
             aria-label="Cancel"
+<<<<<<< HEAD
             className="bg-red-600 text-white px-3 py-2 rounded-lg hover:bg-red-700 min-h-[44px] transition-colors"
+=======
+            className="bg-gray-200 text-gray-700 px-3 py-2 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 min-h-[44px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
           >
             <X className="w-4 h-4" />
           </button>
@@ -204,7 +216,11 @@ export default function PatientProfileView({
           ===================================================================== */}
       <div>
         <h4 className="font-semibold text-foreground flex items-center gap-2 mb-2">
+<<<<<<< HEAD
           <Calendar className="w-4 h-4 text-[#1d4ed8]" />
+=======
+          <Calendar className="w-4 h-4 text-blue-600" />
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
           Visit History
         </h4>
         <div className="space-y-2 max-h-32 overflow-y-auto">
@@ -233,14 +249,22 @@ export default function PatientProfileView({
         {/* Section Header with Upload Button */}
         <div className="flex items-center justify-between mb-2">
           <h4 className="font-semibold text-foreground flex items-center gap-2">
+<<<<<<< HEAD
             <FileText className="w-4 h-4 text-[#1d4ed8]" />
+=======
+            <FileText className="w-4 h-4 text-blue-600" />
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             Medical Records
           </h4>
           {showUploadRequest && (
             <button
               onClick={() => setShowUploadModal(true)}
               aria-label="Request document upload"
+<<<<<<< HEAD
               className="bg-[#1d4ed8] text-white px-2 py-1 rounded text-xs font-medium hover:bg-[#1e40af] flex items-center gap-1 min-h-[32px] transition-colors"
+=======
+              className="bg-blue-600 text-white px-2 py-1 rounded text-xs font-medium hover:bg-blue-700 flex items-center gap-1 min-h-[32px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               <Plus className="w-3 h-3" />
               Ask for Upload
@@ -259,7 +283,11 @@ export default function PatientProfileView({
                 </div>
                 <div className="flex items-center gap-2">
                   {/* Record Type Badge */}
+<<<<<<< HEAD
                   <span className="text-xs bg-blue-100 text-[#1d4ed8] px-1.5 py-0.5 rounded dark:bg-blue-900/30 dark:text-blue-400">
+=======
+                  <span className="text-xs bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded dark:bg-blue-900/30 dark:text-blue-400">
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     {record.type}
                   </span>
                   <span className="text-xs text-muted-foreground">{record.notes}</span>
@@ -304,7 +332,11 @@ export default function PatientProfileView({
                   value={uploadRequest.title}
                   onChange={(e) => setUploadRequest({ ...uploadRequest, title: e.target.value })}
                   placeholder="e.g., Blood Test Results"
+<<<<<<< HEAD
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white min-h-[44px]"
+=======
+                  className="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[44px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
               </div>
               
@@ -317,7 +349,11 @@ export default function PatientProfileView({
                   id="upload-type"
                   value={uploadRequest.type}
                   onChange={(e) => setUploadRequest({ ...uploadRequest, type: e.target.value })}
+<<<<<<< HEAD
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white min-h-[44px]"
+=======
+                  className="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[44px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 >
                   <option value="Lab report">Lab report</option>
                   <option value="Imaging">Imaging</option>
@@ -338,7 +374,11 @@ export default function PatientProfileView({
                   onChange={(e) => setUploadRequest({ ...uploadRequest, notes: e.target.value })}
                   placeholder="Additional instructions..."
                   rows={3}
+<<<<<<< HEAD
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400"
+=======
+                  className="w-full px-3 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
               </div>
             </div>
@@ -349,7 +389,11 @@ export default function PatientProfileView({
                 onClick={handleUploadSubmit}
                 disabled={!uploadRequest.title}
                 aria-label="Send request"
+<<<<<<< HEAD
                 className="w-full bg-[#1d4ed8] text-white px-4 py-2.5 rounded-lg font-medium hover:bg-[#1e40af] disabled:bg-gray-300 disabled:cursor-not-allowed min-h-[44px] transition-colors"
+=======
+                className="w-full bg-blue-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed min-h-[44px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               >
                 Send Request
               </button>

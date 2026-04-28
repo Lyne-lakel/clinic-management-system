@@ -29,7 +29,11 @@ function StatusBadge({ status }) {
   const styles = {
     present: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400",
     absent: "bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400",
+<<<<<<< HEAD
     is_serving: "bg-blue-100 text-[#1d4ed8] dark:bg-blue-900/30 dark:text-blue-400",
+=======
+    is_serving: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400",
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   };
   const labels = {
     present: "Ready",
@@ -130,7 +134,11 @@ export default function DoctorQueue() {
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-foreground flex items-center gap-2">
+<<<<<<< HEAD
           <ClipboardList className="w-6 h-6 text-[#1d4ed8]" />
+=======
+          <ClipboardList className="w-6 h-6 text-blue-600" />
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
           Consultation Queue
         </h1>
         <p className="text-muted-foreground">Patients ordered by appointment time</p>
@@ -147,8 +155,13 @@ export default function DoctorQueue() {
           <p className="text-sm text-gray-600 dark:text-gray-400">Absent</p>
         </div>
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 text-center">
+<<<<<<< HEAD
           <p className="text-2xl font-bold text-[#1d4ed8]">{completedCount}</p>
           <p className="text-sm text-[#1d4ed8] dark:text-blue-400">Completed</p>
+=======
+          <p className="text-2xl font-bold text-blue-600">{completedCount}</p>
+          <p className="text-sm text-blue-700 dark:text-blue-400">Completed</p>
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
         </div>
       </div>
 
@@ -157,7 +170,11 @@ export default function DoctorQueue() {
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
           <div className="flex items-center justify-between">
             <div>
+<<<<<<< HEAD
               <p className="text-xs text-[#1d4ed8] dark:text-blue-400 font-medium mb-1">Currently Serving</p>
+=======
+              <p className="text-xs text-blue-600 dark:text-blue-400 font-medium mb-1">Currently Serving</p>
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               <p className="text-lg font-semibold text-foreground">{currentlyServing.patient}</p>
               <p className="text-sm text-muted-foreground flex items-center gap-1">
                 <Clock className="w-4 h-4" />
@@ -167,7 +184,11 @@ export default function DoctorQueue() {
             <button
               onClick={() => handleStart(currentlyServing)}
               aria-label="Resume consultation"
+<<<<<<< HEAD
               className="bg-[#1d4ed8] text-white px-4 py-3 rounded-lg font-medium hover:bg-[#1e40af] min-h-[44px] transition-colors"
+=======
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 min-h-[44px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               Resume
             </button>
@@ -228,7 +249,11 @@ export default function DoctorQueue() {
                             <button
                               onClick={() => handleStart(apt)}
                               aria-label={`Start consultation with ${apt.patient}`}
+<<<<<<< HEAD
                               className="bg-[#1d4ed8] text-white px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-[#1e40af] flex items-center gap-1 min-h-[36px] transition-colors"
+=======
+                              className="bg-blue-600 text-white px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-blue-700 flex items-center gap-1 min-h-[36px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                             >
                               <Play className="w-4 h-4" />
                               Start
@@ -236,7 +261,11 @@ export default function DoctorQueue() {
                             <button
                               onClick={() => handleMarkAbsent(apt.id)}
                               aria-label={`Mark ${apt.patient} as absent`}
+<<<<<<< HEAD
                               className="bg-red-600 text-white px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-red-700 flex items-center gap-1 min-h-[36px] transition-colors"
+=======
+                              className="bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-gray-200 flex items-center gap-1 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 min-h-[36px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                             >
                               <UserX className="w-4 h-4" />
                             </button>
@@ -287,7 +316,11 @@ export default function DoctorQueue() {
                 ? "bg-red-500"
                 : toast.type === "warning"
                 ? "bg-yellow-500"
+<<<<<<< HEAD
                 : "bg-[#1d4ed8]"
+=======
+                : "bg-blue-500"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             }`}
           >
             {toast.message}

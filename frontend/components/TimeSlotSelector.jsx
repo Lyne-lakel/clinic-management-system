@@ -16,7 +16,11 @@ export default function TimeSlotSelector({ selectedTime, onSelectTime, timeSlots
               onClick={() => onSelectTime(time)}
               className={`p-3 rounded-lg text-sm font-medium transition-all ${
                 selectedTime === time
+<<<<<<< HEAD
                   ? 'bg-gradient-to-br from-[#1d4ed8] to-[#1d4ed8] text-white'
+=======
+                  ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white'
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   : 'bg-white border border-gray-300 text-gray-900 hover:bg-blue-50 hover:border-blue-300'
               }`}
             >

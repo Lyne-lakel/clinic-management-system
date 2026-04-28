@@ -154,7 +154,11 @@ export default function ConsultationModal({
               aria-label={showProfile ? "Hide profile" : "View profile"}
               className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium min-h-[44px] transition-colors ${
                 showProfile 
+<<<<<<< HEAD
                   ? "bg-[#1d4ed8] text-white shadow-sm" 
+=======
+                  ? "bg-blue-600 text-white" 
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   : "bg-muted text-foreground hover:bg-muted/80"
               }`}
             >
@@ -187,7 +191,11 @@ export default function ConsultationModal({
           {showProfile && (
             <div className="border border-border rounded-lg p-4 bg-muted/30">
               <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+<<<<<<< HEAD
                 <User className="w-4 h-4 text-[#1d4ed8]" />
+=======
+                <User className="w-4 h-4 text-blue-600" />
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 Patient Profile
               </h3>
               <PatientProfileView 
@@ -236,7 +244,11 @@ export default function ConsultationModal({
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Write consultation notes..."
               rows={4}
+<<<<<<< HEAD
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400 min-h-[100px]"
+=======
+              className="w-full px-3 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[100px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             />
           </div>
 
@@ -254,7 +266,11 @@ export default function ConsultationModal({
               onChange={(e) => setPrescription(e.target.value)}
               placeholder="Medication, dosage, duration..."
               rows={4}
+<<<<<<< HEAD
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400 min-h-[100px]"
+=======
+              className="w-full px-3 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[100px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             />
           </div>
         </div>
@@ -280,7 +296,11 @@ export default function ConsultationModal({
               onClick={handleSaveNext}
               disabled={!hasNextPatient}
               aria-label="Save and Call Next"
+<<<<<<< HEAD
               className="flex-1 bg-[#1d4ed8] text-white px-4 py-2.5 rounded-lg font-medium hover:bg-[#1e40af] disabled:bg-gray-300 disabled:cursor-not-allowed min-h-[44px] transition-colors"
+=======
+              className="flex-1 bg-blue-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed min-h-[44px]"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               Save & Next
             </button>

@@ -47,7 +47,11 @@ export default function OldPatientForm() {
             setError('');
           }}
           placeholder="Enter your file number"
+<<<<<<< HEAD
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] focus:border-transparent transition-all"
+=======
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
         />
         {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
       </div>
@@ -55,7 +59,11 @@ export default function OldPatientForm() {
       <button
         type="submit"
         disabled={loading}
+<<<<<<< HEAD
         className="w-full bg-gradient-to-r from-[#1d4ed8] to-[#1d4ed8] text-white font-semibold py-3 rounded-lg hover:from-[#1d4ed8] hover:to-[#1d4ed8] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+=======
+        className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold py-3 rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+>>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
       >
         {loading && (
           <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
