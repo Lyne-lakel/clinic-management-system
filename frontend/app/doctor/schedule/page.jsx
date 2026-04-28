@@ -317,7 +317,6 @@ export default function DoctorSchedule() {
     }, 3000);
   };
 
-<<<<<<< HEAD
   const playNotification = () => {
     try {
       new Audio('/sounds/success.mp3').play();
@@ -326,8 +325,6 @@ export default function DoctorSchedule() {
     }
   };
 
-=======
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   // Get appointments for selected date
   const selectedDateAppointments = appointments
     .filter(apt => apt.date === selectedDate)
@@ -401,10 +398,7 @@ export default function DoctorSchedule() {
     setShowConsultation(false);
     setSelectedPatient(null);
     showToast("Consultation saved");
-<<<<<<< HEAD
     playNotification();
-=======
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   };
 
   // Print functions
@@ -501,10 +495,7 @@ export default function DoctorSchedule() {
 
   const handleReschedule = (aptId) => {
     showToast("Reschedule request sent to receptionist", "info");
-<<<<<<< HEAD
     playNotification();
-=======
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   };
 
   const handleCancel = (aptId) => {
@@ -520,11 +511,7 @@ export default function DoctorSchedule() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-foreground flex items-center gap-2">
-<<<<<<< HEAD
             <Calendar className="w-6 h-6 text-[#1d4ed8]" />
-=======
-            <Calendar className="w-6 h-6 text-blue-600" />
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             Schedule
           </h1>
           <p className="text-muted-foreground">{formatDateDisplay(selectedDate)}</p>
@@ -567,15 +554,9 @@ export default function DoctorSchedule() {
                     onClick={() => setSelectedDate(dateStr)}
                     className={`p-3 rounded-lg text-center transition-colors min-h-[80px] flex flex-col items-center justify-center ${
                       isSelected
-<<<<<<< HEAD
                         ? "bg-[#1d4ed8] text-white"
                         : isTodayDate
                         ? "bg-blue-100 text-[#1d4ed8] border-2 border-[#1d4ed8]"
-=======
-                        ? "bg-blue-600 text-white"
-                        : isTodayDate
-                        ? "bg-blue-100 text-blue-700 border-2 border-blue-500"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                         : "hover:bg-muted"
                     }`}
                   >
@@ -583,11 +564,7 @@ export default function DoctorSchedule() {
                     <span className="text-lg font-bold">{day.getDate()}</span>
                     {count > 0 && (
                       <span className={`text-xs mt-1 px-2 py-0.5 rounded-full ${
-<<<<<<< HEAD
                         isSelected ? "bg-white/30 text-white" : "bg-blue-100 text-[#1d4ed8]"
-=======
-                        isSelected ? "bg-white/30 text-white" : "bg-blue-100 text-blue-700"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                       }`}>
                         {count}
                       </span>
@@ -633,15 +610,9 @@ export default function DoctorSchedule() {
                     onClick={() => setSelectedDate(dateStr)}
                     className={`p-2 rounded-lg text-center transition-colors min-h-[60px] flex flex-col items-center justify-center ${
                       isSelected
-<<<<<<< HEAD
                         ? "bg-[#1d4ed8] text-white"
                         : isTodayDate
                         ? "bg-blue-100 text-[#1d4ed8] border border-[#1d4ed8]"
-=======
-                        ? "bg-blue-600 text-white"
-                        : isTodayDate
-                        ? "bg-blue-100 text-blue-700 border border-blue-500"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                         : count > 0
                         ? "bg-muted/50 hover:bg-muted"
                         : "hover:bg-muted"
@@ -649,11 +620,7 @@ export default function DoctorSchedule() {
                   >
                     <span className="text-sm font-medium">{day}</span>
                     {count > 0 && (
-<<<<<<< HEAD
                       <span className={`text-[10px] mt-0.5 ${isSelected ? "text-white/80" : "text-[#1d4ed8]"}`}>
-=======
-                      <span className={`text-[10px] mt-0.5 ${isSelected ? "text-white/80" : "text-blue-600"}`}>
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                         {count} apt
                       </span>
                     )}
@@ -684,17 +651,10 @@ export default function DoctorSchedule() {
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-1">
-<<<<<<< HEAD
                       <span className="text-lg font-bold text-[#1d4ed8]">{apt.time}</span>
                       <span className="font-semibold text-foreground">{apt.patient}</span>
                       {apt.status === "is_serving" && (
                         <span className="text-xs px-2 py-1 rounded bg-blue-100 text-[#1d4ed8] font-medium">
-=======
-                      <span className="text-lg font-bold text-blue-600">{apt.time}</span>
-                      <span className="font-semibold text-foreground">{apt.patient}</span>
-                      {apt.status === "is_serving" && (
-                        <span className="text-xs px-2 py-1 rounded bg-blue-100 text-blue-700 font-medium">
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                           In Consultation
                         </span>
                       )}
@@ -714,11 +674,7 @@ export default function DoctorSchedule() {
                     <div className="flex items-center gap-2 shrink-0">
                       <button
                         onClick={() => handleStartConsultation(apt)}
-<<<<<<< HEAD
                         className="bg-[#1d4ed8] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#1e40af] flex items-center gap-2 min-h-[40px] transition-colors"
-=======
-                        className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 flex items-center gap-2 min-h-[40px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                       >
                         <Play className="w-4 h-4" />
                         Start
@@ -766,11 +722,7 @@ export default function DoctorSchedule() {
                 <div className="space-y-4">
                   <div className="bg-muted/30 rounded-lg p-4">
                     <div className="flex items-center gap-3 mb-4">
-<<<<<<< HEAD
                       <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#1d4ed8] to-purple-600 flex items-center justify-center text-white text-xl font-bold">
-=======
-                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xl font-bold">
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                         {selectedPatient.patient.split(" ").map(n => n[0]).join("")}
                       </div>
                       <div>
@@ -793,11 +745,7 @@ export default function DoctorSchedule() {
                     </div>
                   </div>
 
-<<<<<<< HEAD
                   <button onClick={() => setShowHistory(!showHistory)} className="w-full bg-[#1d4ed8] text-white px-4 py-3 rounded-lg font-medium hover:bg-[#1e40af] transition-colors flex items-center justify-center gap-2">
-=======
-                  <button onClick={() => setShowHistory(!showHistory)} className="w-full bg-muted text-foreground px-4 py-3 rounded-lg font-medium hover:bg-muted/80 flex items-center justify-center gap-2">
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     <History className="w-5 h-5" />
                     {showHistory ? "Hide" : "View"} History
                   </button>
@@ -807,11 +755,7 @@ export default function DoctorSchedule() {
                       <h4 className="font-medium">Past Visits</h4>
                       {selectedPatient.visitHistory && selectedPatient.visitHistory.length > 0 ? (
                         selectedPatient.visitHistory.map((visit, idx) => (
-<<<<<<< HEAD
                           <div key={idx} className="border-l-2 border-[#1d4ed8] pl-3 py-2">
-=======
-                          <div key={idx} className="border-l-2 border-blue-500 pl-3 py-2">
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                             <p className="text-sm font-medium">{visit.date} at {visit.time}</p>
                             <p className="text-xs text-muted-foreground">{visit.reason}</p>
                           </div>
@@ -827,36 +771,23 @@ export default function DoctorSchedule() {
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium mb-1">Notes <span className="text-xs text-muted-foreground">(not printed)</span></label>
-<<<<<<< HEAD
                     <textarea value={consultNotes} onChange={(e) => setConsultNotes(e.target.value)} placeholder="Write consultation notes..." rows={4} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400" />
-=======
-                    <textarea value={consultNotes} onChange={(e) => setConsultNotes(e.target.value)} placeholder="Write consultation notes..." rows={4} className="w-full px-3 py-2 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500" />
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium mb-1">Prescription</label>
-<<<<<<< HEAD
                     <textarea value={consultPrescription} onChange={(e) => setConsultPrescription(e.target.value)} rows={5} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400 font-mono text-sm" />
-=======
-                    <textarea value={consultPrescription} onChange={(e) => setConsultPrescription(e.target.value)} rows={5} className="w-full px-3 py-2 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono text-sm" />
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium mb-1 flex items-center gap-1"><FileCheck className="w-4 h-4" />Medical Justification</label>
-<<<<<<< HEAD
                     <textarea value={consultJustification} onChange={(e) => setConsultJustification(e.target.value)} rows={5} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400 font-mono text-sm" />
-=======
-                    <textarea value={consultJustification} onChange={(e) => setConsultJustification(e.target.value)} rows={5} className="w-full px-3 py-2 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-purple-500 font-mono text-sm" />
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   </div>
                 </div>
               </div>
             </div>
             
             <div className="p-4 border-t border-border flex flex-wrap gap-3 shrink-0">
-<<<<<<< HEAD
               <button onClick={handleSave} className="flex-1 bg-emerald-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-emerald-700 flex items-center justify-center gap-2 min-h-[44px] transition-colors">
                 <Save className="w-5 h-5" />Save
               </button>
@@ -864,15 +795,6 @@ export default function DoctorSchedule() {
                 <Printer className="w-5 h-5" />Print Prescription
               </button>
               <button onClick={handlePrintJustification} className="bg-purple-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-purple-700 flex items-center justify-center gap-2 min-h-[44px] transition-colors">
-=======
-              <button onClick={handleSave} className="flex-1 bg-emerald-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-emerald-700 flex items-center justify-center gap-2 min-h-[44px]">
-                <Save className="w-5 h-5" />Save
-              </button>
-              <button onClick={handlePrintPrescription} className="bg-blue-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-blue-700 flex items-center justify-center gap-2 min-h-[44px]">
-                <Printer className="w-5 h-5" />Print Prescription
-              </button>
-              <button onClick={handlePrintJustification} className="bg-purple-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-purple-700 flex items-center justify-center gap-2 min-h-[44px]">
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 <FileCheck className="w-5 h-5" />Print Justification
               </button>
             </div>
@@ -883,11 +805,7 @@ export default function DoctorSchedule() {
       {/* Toasts */}
       <div className="fixed bottom-20 md:bottom-5 right-5 space-y-2 z-50">
         {toasts.map((toast) => (
-<<<<<<< HEAD
           <div key={toast.id} className={`px-4 py-3 rounded-lg shadow text-white ${toast.type === "success" ? "bg-green-500" : toast.type === "warning" ? "bg-yellow-500" : "bg-[#1d4ed8]"}`}>
-=======
-          <div key={toast.id} className={`px-4 py-3 rounded-lg shadow text-white ${toast.type === "success" ? "bg-green-500" : toast.type === "warning" ? "bg-yellow-500" : "bg-blue-500"}`}>
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             {toast.message}
           </div>
         ))}

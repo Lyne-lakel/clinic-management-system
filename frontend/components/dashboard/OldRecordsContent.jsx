@@ -105,11 +105,7 @@ export default function OldRecordsContent({ onNotify }) {
       {/* Add File Button */}
       <button
         onClick={() => setIsAddingFile(!isAddingFile)}
-<<<<<<< HEAD
         className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1d4ed8] hover:bg-[#1d4ed8] text-white rounded-lg transition-colors font-medium text-base"
-=======
-        className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
@@ -129,11 +125,7 @@ export default function OldRecordsContent({ onNotify }) {
                 value={newFileData.name}
                 onChange={(e) => setNewFileData({ ...newFileData, name: e.target.value })}
                 placeholder="Enter file name"
-<<<<<<< HEAD
                 className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] text-base"
-=======
-                className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               />
             </div>
 
@@ -143,11 +135,7 @@ export default function OldRecordsContent({ onNotify }) {
                 <select
                   value={newFileData.type}
                   onChange={(e) => setNewFileData({ ...newFileData, type: e.target.value })}
-<<<<<<< HEAD
                   className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] text-base"
-=======
-                  className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 >
                   {types.map((type) => (
                     <option key={type.id} value={type.id}>
@@ -163,11 +151,7 @@ export default function OldRecordsContent({ onNotify }) {
                   type="date"
                   value={newFileData.date}
                   onChange={(e) => setNewFileData({ ...newFileData, date: e.target.value })}
-<<<<<<< HEAD
                   className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] text-base"
-=======
-                  className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
               </div>
             </div>
@@ -178,20 +162,12 @@ export default function OldRecordsContent({ onNotify }) {
                 value={newFileData.notes}
                 onChange={(e) => setNewFileData({ ...newFileData, notes: e.target.value })}
                 placeholder="Add any relevant notes about this file"
-<<<<<<< HEAD
                 className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] resize-none h-20 text-base"
-=======
-                className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none h-20 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               />
             </div>
 
             <div className="flex gap-2">
-<<<<<<< HEAD
               <label className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-100 border-2 border-[#1d4ed8] rounded-lg cursor-pointer hover:bg-blue-50 transition-colors font-medium text-[#1d4ed8]">
-=======
-              <label className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-100 border-2 border-blue-600 rounded-lg cursor-pointer hover:bg-blue-50 transition-colors font-medium text-blue-600">
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                 </svg>
@@ -205,11 +181,7 @@ export default function OldRecordsContent({ onNotify }) {
               </label>
               <button
                 onClick={handleAddFile}
-<<<<<<< HEAD
                 className="flex-1 px-4 py-2 bg-[#1d4ed8] hover:bg-[#1d4ed8] text-white rounded-lg transition-colors font-semibold"
-=======
-                className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-semibold"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               >
                 Add Record
               </button>
@@ -242,15 +214,9 @@ export default function OldRecordsContent({ onNotify }) {
             <select
               value={filterType}
               onChange={(e) => setFilterType(e.target.value)}
-<<<<<<< HEAD
               className={`w-full px-3 py-2.5 border-2 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] ${
                 filterType
                   ? 'border-[#1d4ed8] bg-blue-50 text-gray-900'
-=======
-              className={`w-full px-3 py-2.5 border-2 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                filterType
-                  ? 'border-blue-600 bg-blue-50 text-gray-900'
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   : 'border-gray-300 bg-white text-gray-900'
               }`}
             >
@@ -270,15 +236,9 @@ export default function OldRecordsContent({ onNotify }) {
               type="date"
               value={filterStartDate}
               onChange={(e) => setFilterStartDate(e.target.value)}
-<<<<<<< HEAD
               className={`w-full px-3 py-2.5 border-2 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] ${
                 filterStartDate
                   ? 'border-[#1d4ed8] bg-blue-50'
-=======
-              className={`w-full px-3 py-2.5 border-2 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                filterStartDate
-                  ? 'border-blue-600 bg-blue-50'
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   : 'border-gray-300 bg-white'
               }`}
             />
@@ -291,15 +251,9 @@ export default function OldRecordsContent({ onNotify }) {
               type="date"
               value={filterEndDate}
               onChange={(e) => setFilterEndDate(e.target.value)}
-<<<<<<< HEAD
               className={`w-full px-3 py-2.5 border-2 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] ${
                 filterEndDate
                   ? 'border-[#1d4ed8] bg-blue-50'
-=======
-              className={`w-full px-3 py-2.5 border-2 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                filterEndDate
-                  ? 'border-blue-600 bg-blue-50'
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   : 'border-gray-300 bg-white'
               }`}
             />
@@ -344,11 +298,7 @@ export default function OldRecordsContent({ onNotify }) {
                     title="Download"
                     className="p-2.5 hover:bg-blue-50 rounded-lg transition-colors"
                   >
-<<<<<<< HEAD
                     <svg className="w-5 h-5 text-[#1d4ed8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-=======
-                    <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
                   </button>

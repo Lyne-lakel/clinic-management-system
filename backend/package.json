@@ -17,10 +17,7 @@
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.1.1",
-<<<<<<< HEAD
     "mongoose": "^9.4.1",
-=======
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
     "nodemailer": "^8.0.5"
   },
   "devDependencies": {

@@ -125,11 +125,7 @@ export default function DoctorSettings() {
             <button
               onClick={handleStartEdit}
               aria-label="Edit profile"
-<<<<<<< HEAD
               className="flex items-center gap-2 text-[#1d4ed8] hover:text-[#1e40af] px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-[#1d4ed8]/20 min-h-[44px] transition-colors"
-=======
-              className="flex items-center gap-2 text-blue-600 hover:text-blue-700 px-3 py-2 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               <Edit2 className="w-4 h-4" />
               <span className="text-sm font-medium">Edit</span>
@@ -147,11 +143,7 @@ export default function DoctorSettings() {
               <button
                 onClick={handleCancel}
                 aria-label="Cancel editing"
-<<<<<<< HEAD
                 className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 min-h-[44px] transition-colors"
-=======
-                className="flex items-center gap-2 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               >
                 <X className="w-4 h-4" />
                 <span className="text-sm font-medium">Cancel</span>
@@ -189,11 +181,7 @@ export default function DoctorSettings() {
                 type="email"
                 value={editedProfile.email}
                 onChange={(e) => setEditedProfile({ ...editedProfile, email: e.target.value })}
-<<<<<<< HEAD
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white min-h-[48px]"
-=======
-                className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[48px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               />
             ) : (
               <p className="text-foreground bg-muted px-4 py-3 rounded-lg min-h-[48px] flex items-center">
@@ -210,11 +198,7 @@ export default function DoctorSettings() {
                 type="tel"
                 value={editedProfile.phone}
                 onChange={(e) => setEditedProfile({ ...editedProfile, phone: e.target.value })}
-<<<<<<< HEAD
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white min-h-[48px]"
-=======
-                className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[48px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               />
             ) : (
               <p className="text-foreground bg-muted px-4 py-3 rounded-lg min-h-[48px] flex items-center">
@@ -231,11 +215,7 @@ export default function DoctorSettings() {
                 type="tel"
                 value={editedProfile.emergencyContact}
                 onChange={(e) => setEditedProfile({ ...editedProfile, emergencyContact: e.target.value })}
-<<<<<<< HEAD
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white min-h-[48px]"
-=======
-                className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[48px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               />
             ) : (
               <p className="text-foreground bg-muted px-4 py-3 rounded-lg min-h-[48px] flex items-center">
@@ -252,11 +232,7 @@ export default function DoctorSettings() {
                 type="text"
                 value={editedProfile.address}
                 onChange={(e) => setEditedProfile({ ...editedProfile, address: e.target.value })}
-<<<<<<< HEAD
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white min-h-[48px]"
-=======
-                className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[48px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               />
             ) : (
               <p className="text-foreground bg-muted px-4 py-3 rounded-lg min-h-[48px] flex items-center">

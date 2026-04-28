@@ -154,11 +154,7 @@ export default function SettingsHelpContent({ onNotify }) {
               setIsEditingProfile(!isEditingProfile);
               setFormData(profileData);
             }}
-<<<<<<< HEAD
             className="flex items-center gap-2 px-4 py-2 bg-[#1d4ed8] hover:bg-[#1d4ed8] text-white rounded-md transition-colors text-base font-medium"
-=======
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors text-base font-medium"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -260,11 +256,7 @@ export default function SettingsHelpContent({ onNotify }) {
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-<<<<<<< HEAD
                   className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] text-base"
-=======
-                  className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
               </div>
 
@@ -274,11 +266,7 @@ export default function SettingsHelpContent({ onNotify }) {
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-<<<<<<< HEAD
                   className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] text-base"
-=======
-                  className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
               </div>
 
@@ -288,11 +276,7 @@ export default function SettingsHelpContent({ onNotify }) {
                   type="tel"
                   value={formData.emergency}
                   onChange={(e) => setFormData({ ...formData, emergency: e.target.value })}
-<<<<<<< HEAD
                   className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] text-base"
-=======
-                  className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
               </div>
 
@@ -307,20 +291,12 @@ export default function SettingsHelpContent({ onNotify }) {
                     value={newCondition}
                     onChange={(e) => setNewCondition(e.target.value)}
                     placeholder="Condition name"
-<<<<<<< HEAD
                     className="flex-1 px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] text-base"
-=======
-                    className="flex-1 px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   />
                   <button
                     type="button"
                     onClick={handleAddCondition}
-<<<<<<< HEAD
                     className="px-4 py-2.5 bg-[#1d4ed8] hover:bg-[#1d4ed8] text-white rounded-lg transition-colors font-medium text-base"
-=======
-                    className="px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   >
                     Add
                   </button>
@@ -330,11 +306,7 @@ export default function SettingsHelpContent({ onNotify }) {
                   value={newConditionMeds}
                   onChange={(e) => setNewConditionMeds(e.target.value)}
                   placeholder="Medications taken"
-<<<<<<< HEAD
                   className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] mb-3 text-base"
-=======
-                  className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
                 <div className="space-y-2">
                   {formData.conditions.map((condition, index) => (
@@ -357,20 +329,12 @@ export default function SettingsHelpContent({ onNotify }) {
                     value={newAllergy}
                     onChange={(e) => setNewAllergy(e.target.value)}
                     placeholder="Allergy name"
-<<<<<<< HEAD
                     className="flex-1 px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] text-base"
-=======
-                    className="flex-1 px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   />
                   <button
                     type="button"
                     onClick={handleAddAllergy}
-<<<<<<< HEAD
                     className="px-4 py-2.5 bg-[#1d4ed8] hover:bg-[#1d4ed8] text-white rounded-lg transition-colors font-medium text-base"
-=======
-                    className="px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   >
                     Add
                   </button>
@@ -380,11 +344,7 @@ export default function SettingsHelpContent({ onNotify }) {
                   value={newAllergyMeds}
                   onChange={(e) => setNewAllergyMeds(e.target.value)}
                   placeholder="Management/Medications"
-<<<<<<< HEAD
                   className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] mb-3 text-base"
-=======
-                  className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
                 <div className="space-y-2">
                   {formData.allergies.map((allergy, index) => (
@@ -407,20 +367,12 @@ export default function SettingsHelpContent({ onNotify }) {
                     value={newHereditaryCondition}
                     onChange={(e) => setNewHereditaryCondition(e.target.value)}
                     placeholder="Condition name"
-<<<<<<< HEAD
                     className="flex-1 px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] text-base"
-=======
-                    className="flex-1 px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   />
                   <button
                     type="button"
                     onClick={handleAddHereditaryCondition}
-<<<<<<< HEAD
                     className="px-4 py-2.5 bg-[#1d4ed8] hover:bg-[#1d4ed8] text-white rounded-lg transition-colors font-medium text-base"
-=======
-                    className="px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   >
                     Add
                   </button>
@@ -429,11 +381,7 @@ export default function SettingsHelpContent({ onNotify }) {
                   value={newHereditaryNote}
                   onChange={(e) => setNewHereditaryNote(e.target.value)}
                   placeholder="Additional details (family member, notes)"
-<<<<<<< HEAD
                   className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] resize-none h-16 mb-3 text-base"
-=======
-                  className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none h-16 mb-3 text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
                 <div className="space-y-2">
                   {formData.hereditaryConditions.map((condition, index) => (
@@ -450,11 +398,7 @@ export default function SettingsHelpContent({ onNotify }) {
               <div className="flex gap-3">
                 <button
                   onClick={handleSaveProfile}
-<<<<<<< HEAD
                   className="flex-1 px-4 py-3 bg-[#1d4ed8] hover:bg-[#1d4ed8] text-white rounded-lg transition-colors font-semibold text-base"
-=======
-                  className="flex-1 px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-semibold text-base"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 >
                   Save Changes
                 </button>
@@ -482,11 +426,7 @@ export default function SettingsHelpContent({ onNotify }) {
             <button
               onClick={() => handleReminder('oneWeek')}
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-<<<<<<< HEAD
                 appointmentReminders.oneWeek ? 'bg-[#1d4ed8]' : 'bg-gray-300'
-=======
-                appointmentReminders.oneWeek ? 'bg-blue-600' : 'bg-gray-300'
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               }`}
             >
               <span
@@ -502,11 +442,7 @@ export default function SettingsHelpContent({ onNotify }) {
             <button
               onClick={() => handleReminder('oneDay')}
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-<<<<<<< HEAD
                 appointmentReminders.oneDay ? 'bg-[#1d4ed8]' : 'bg-gray-300'
-=======
-                appointmentReminders.oneDay ? 'bg-blue-600' : 'bg-gray-300'
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               }`}
             >
               <span
@@ -522,11 +458,7 @@ export default function SettingsHelpContent({ onNotify }) {
             <button
               onClick={() => handleReminder('oneHour')}
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-<<<<<<< HEAD
                 appointmentReminders.oneHour ? 'bg-[#1d4ed8]' : 'bg-gray-300'
-=======
-                appointmentReminders.oneHour ? 'bg-blue-600' : 'bg-gray-300'
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               }`}
             >
               <span
@@ -542,11 +474,7 @@ export default function SettingsHelpContent({ onNotify }) {
             <button
               onClick={() => handleReminder('fifteenMin')}
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-<<<<<<< HEAD
                 appointmentReminders.fifteenMin ? 'bg-[#1d4ed8]' : 'bg-gray-300'
-=======
-                appointmentReminders.fifteenMin ? 'bg-blue-600' : 'bg-gray-300'
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               }`}
             >
               <span

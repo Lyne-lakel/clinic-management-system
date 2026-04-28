@@ -280,22 +280,14 @@ export default function DoctorJustifications() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-foreground flex items-center gap-2">
-<<<<<<< HEAD
             <FileCheck className="w-6 h-6 text-[#1d4ed8]" />
-=======
-            <FileCheck className="w-6 h-6 text-purple-600" />
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             Justifications
           </h1>
           <p className="text-muted-foreground">Manage all medical justifications</p>
         </div>
         <button
           onClick={() => setShowAddModal(true)}
-<<<<<<< HEAD
           className="bg-[#1d4ed8] text-white px-4 py-3 rounded-lg font-medium hover:bg-[#1e40af] flex items-center gap-2 min-h-[44px] transition-colors"
-=======
-          className="bg-purple-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-purple-700 flex items-center gap-2 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
         >
           <Plus className="w-5 h-5" />
           New Justification
@@ -313,11 +305,7 @@ export default function DoctorJustifications() {
               placeholder="Search by patient name or reason..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-<<<<<<< HEAD
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400 min-h-[44px]"
-=======
-              className="w-full pl-10 pr-4 py-2.5 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-purple-500 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             />
           </div>
           
@@ -328,11 +316,7 @@ export default function DoctorJustifications() {
               type="date"
               value={dateFilter}
               onChange={(e) => setDateFilter(e.target.value)}
-<<<<<<< HEAD
               className="pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white min-h-[44px]"
-=======
-              className="pl-10 pr-4 py-2.5 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-purple-500 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             />
           </div>
           
@@ -386,21 +370,13 @@ export default function DoctorJustifications() {
                 <div className="flex items-center gap-2 shrink-0">
                   <button
                     onClick={() => handleView(just)}
-<<<<<<< HEAD
                     className="px-3 py-2 text-[#1d4ed8] hover:bg-blue-50 rounded-lg text-sm font-medium min-h-[40px]"
-=======
-                    className="px-3 py-2 text-purple-600 hover:bg-purple-50 rounded-lg text-sm font-medium min-h-[40px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   >
                     View
                   </button>
                   <button
                     onClick={() => handlePrint(just)}
-<<<<<<< HEAD
                     className="p-2 text-[#1d4ed8] hover:bg-blue-50 rounded-lg min-h-[40px] min-w-[40px] flex items-center justify-center"
-=======
-                    className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg min-h-[40px] min-w-[40px] flex items-center justify-center"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                     title="Print"
                   >
                     <Printer className="w-5 h-5" />
@@ -435,11 +411,7 @@ export default function DoctorJustifications() {
                 <select
                   value={newJustification.patient}
                   onChange={(e) => setNewJustification(prev => ({ ...prev, patient: e.target.value }))}
-<<<<<<< HEAD
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white min-h-[44px]"
-=======
-                  className="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-purple-500 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 >
                   <option value="">Select patient...</option>
                   {allPatients.map(p => (
@@ -458,11 +430,7 @@ export default function DoctorJustifications() {
                   value={newJustification.reason}
                   onChange={(e) => setNewJustification(prev => ({ ...prev, reason: e.target.value }))}
                   placeholder="e.g., Prenatal care, Post-operative recovery..."
-<<<<<<< HEAD
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white placeholder:text-gray-400 min-h-[44px]"
-=======
-                  className="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-purple-500 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
               </div>
 
@@ -474,11 +442,7 @@ export default function DoctorJustifications() {
                     type="date"
                     value={newJustification.startDate}
                     onChange={(e) => setNewJustification(prev => ({ ...prev, startDate: e.target.value }))}
-<<<<<<< HEAD
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white min-h-[44px]"
-=======
-                    className="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-purple-500 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   />
                 </div>
                 <div>
@@ -489,11 +453,7 @@ export default function DoctorJustifications() {
                     max="30"
                     value={newJustification.days}
                     onChange={(e) => setNewJustification(prev => ({ ...prev, days: parseInt(e.target.value) || 1 }))}
-<<<<<<< HEAD
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white min-h-[44px]"
-=======
-                    className="w-full px-3 py-2.5 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-purple-500 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   />
                 </div>
               </div>
@@ -507,11 +467,7 @@ export default function DoctorJustifications() {
                   value={newJustification.content}
                   onChange={(e) => setNewJustification(prev => ({ ...prev, content: e.target.value }))}
                   rows={8}
-<<<<<<< HEAD
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all text-gray-900 bg-white font-mono text-sm"
-=======
-                  className="w-full px-3 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-purple-500 font-mono text-sm"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
               </div>
             </div>
@@ -519,21 +475,13 @@ export default function DoctorJustifications() {
             <div className="p-4 border-t border-border flex gap-3 shrink-0">
               <button
                 onClick={() => setShowAddModal(false)}
-<<<<<<< HEAD
                 className="flex-1 bg-red-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-red-700 min-h-[44px] transition-colors"
-=======
-                className="flex-1 bg-muted text-foreground px-4 py-2.5 rounded-lg font-medium hover:bg-muted/80 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               >
                 Cancel
               </button>
               <button
                 onClick={handleAddJustification}
-<<<<<<< HEAD
                 className="flex-1 bg-[#1d4ed8] text-white px-4 py-3 rounded-lg font-medium hover:bg-[#1e40af] flex items-center justify-center gap-2 min-h-[44px] transition-colors"
-=======
-                className="flex-1 bg-purple-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-purple-700 flex items-center justify-center gap-2 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               >
                 <Plus className="w-5 h-5" />
                 Create Justification
@@ -606,21 +554,13 @@ export default function DoctorJustifications() {
             <div className="p-4 border-t border-border flex gap-3 shrink-0">
               <button
                 onClick={() => setShowViewModal(false)}
-<<<<<<< HEAD
                 className="flex-1 bg-red-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-red-700 min-h-[44px] transition-colors"
-=======
-                className="flex-1 bg-muted text-foreground px-4 py-2.5 rounded-lg font-medium hover:bg-muted/80 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               >
                 Close
               </button>
               <button
                 onClick={() => handlePrint(selectedJustification)}
-<<<<<<< HEAD
                 className="flex-1 bg-[#1d4ed8] text-white px-4 py-3 rounded-lg font-medium hover:bg-[#1e40af] flex items-center justify-center gap-2 min-h-[44px] transition-colors"
-=======
-                className="flex-1 bg-purple-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-purple-700 flex items-center justify-center gap-2 min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               >
                 <Printer className="w-5 h-5" />
                 Print
@@ -640,11 +580,7 @@ export default function DoctorJustifications() {
                 ? "bg-green-500"
                 : toast.type === "error"
                 ? "bg-red-500"
-<<<<<<< HEAD
                 : "bg-[#1d4ed8]"
-=======
-                : "bg-blue-500"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             }`}
           >
             {toast.message}

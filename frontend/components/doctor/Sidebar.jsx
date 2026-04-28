@@ -59,11 +59,7 @@ export default function DoctorSidebar() {
         {/* Doctor Profile Section */}
         <div className="p-4 border-b border-border">
           <div className="flex items-center gap-3">
-<<<<<<< HEAD
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#1d4ed8] to-emerald-500 flex items-center justify-center text-white text-lg font-bold">
-=======
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center text-white text-lg font-bold">
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               AN
             </div>
             <div>

@@ -1,6 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { Send, Check, CheckCheck } from "lucide-react";
 
@@ -35,39 +34,6 @@ export default function MessagesPage() {
     };
     fetchDoctors();
   }, []);
-=======
-import { useState } from "react";
-import { Send, Check, CheckCheck } from "lucide-react";
-
-const doctors = [
-  { id: "dr1", name: "Dr. Nouar", specialty: "General Practice" },
-  { id: "dr2", name: "Dr. Bensalem", specialty: "Internal Medicine" },
-  { id: "dr3", name: "Dr. Khelifi", specialty: "Pediatrics" },
-];
-
-// Mock chat history per doctor
-const initialChats = {
-  dr1: [
-    { id: 1, text: "Good morning Dr. Nouar, patient Ahmed Benali is asking about his test results.", sender: "me", time: "09:15", status: "seen" },
-    { id: 2, text: "Good morning Sarah. Please ask him to come in this afternoon, I'll have everything ready.", sender: "doctor", time: "09:18", status: "seen" },
-    { id: 3, text: "Will do. Should I schedule him at 2:00 PM?", sender: "me", time: "09:20", status: "seen" },
-    { id: 4, text: "Yes, 2:00 PM works. Thank you.", sender: "doctor", time: "09:22", status: "seen" },
-  ],
-  dr2: [
-    { id: 1, text: "Dr. Bensalem, Fatima Zohra called to reschedule her appointment.", sender: "me", time: "10:30", status: "seen" },
-    { id: 2, text: "What time did she prefer?", sender: "doctor", time: "10:35", status: "seen" },
-    { id: 3, text: "She asked for next Tuesday morning if possible.", sender: "me", time: "10:36", status: "sent" },
-  ],
-  dr3: [
-    { id: 1, text: "Hello Dr. Khelifi, a new patient wants to book an appointment for their child.", sender: "me", time: "11:00", status: "seen" },
-  ],
-};
-
-export default function MessagesPage() {
-  const [selectedDoctor, setSelectedDoctor] = useState(doctors[0].id);
-  const [chats, setChats] = useState(initialChats);
-  const [newMessage, setNewMessage] = useState("");
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
 
   const currentDoctor = doctors.find((d) => d.id === selectedDoctor);
   const currentChat = chats[selectedDoctor] || [];
@@ -98,12 +64,9 @@ export default function MessagesPage() {
     }
   }
 
-<<<<<<< HEAD
   if (loading) return <div className="flex items-center justify-center p-8"><p className="text-muted-foreground">Loading messages...</p></div>;
   if (doctors.length === 0) return <div className="flex items-center justify-center p-8"><p className="text-muted-foreground">No doctors available</p></div>;
 
-=======
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   return (
     <div className="space-y-6">
       <div>
@@ -131,11 +94,7 @@ export default function MessagesPage() {
         {/* Chat Header */}
         <div className="p-4 border-b border-border bg-muted/50">
           <div className="flex items-center gap-3">
-<<<<<<< HEAD
             <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 text-[#1d4ed8] flex items-center justify-center font-bold">
-=======
-            <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center font-bold">
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               {currentDoctor?.name.charAt(0)}
             </div>
             <div>
@@ -160,11 +119,7 @@ export default function MessagesPage() {
                 <div
                   className={`max-w-[70%] rounded-lg px-4 py-2 ${
                     msg.sender === "me"
-<<<<<<< HEAD
                       ? "bg-[#1d4ed8] text-white"
-=======
-                      ? "bg-blue-600 text-white"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                       : "bg-card border border-border text-foreground"
                   }`}
                 >
@@ -201,11 +156,7 @@ export default function MessagesPage() {
             <button
               onClick={sendMessage}
               disabled={!newMessage.trim()}
-<<<<<<< HEAD
               className="px-4 py-2 bg-[#1d4ed8] text-white rounded-lg hover:bg-[#1d4ed8] disabled:opacity-50 min-h-[44px] flex items-center gap-2"
-=======
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 min-h-[44px] flex items-center gap-2"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               aria-label="Send message"
             >
               <Send className="w-5 h-5" />

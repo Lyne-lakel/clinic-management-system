@@ -229,11 +229,7 @@ export default function SettingsPage() {
       {/* FAQ Section */}
       <div className="bg-card border border-border rounded-lg p-6">
         <div className="flex items-center gap-2 mb-6">
-<<<<<<< HEAD
           <HelpCircle className="w-5 h-5 text-[#1d4ed8]" />
-=======
-          <HelpCircle className="w-5 h-5 text-blue-600" />
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
           <h3 className="font-semibold text-foreground">Frequently Asked Questions</h3>
         </div>
 

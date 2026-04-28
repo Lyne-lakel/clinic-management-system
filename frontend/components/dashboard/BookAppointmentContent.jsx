@@ -100,11 +100,7 @@ export default function BookAppointmentContent({ onNotify }) {
           disabled={isDisabled}
           className={`p-2 text-sm font-medium rounded-lg transition-all ${
             isSelected
-<<<<<<< HEAD
               ? 'bg-[#1d4ed8] text-white border-2 border-[#1d4ed8]'
-=======
-              ? 'bg-blue-600 text-white border-2 border-blue-600'
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               : isDisabled
               ? 'text-gray-300 bg-gray-50 cursor-not-allowed'
               : 'text-gray-700 border-2 border-gray-200 hover:border-gray-300 bg-white'
@@ -157,11 +153,7 @@ export default function BookAppointmentContent({ onNotify }) {
                   onClick={() => setSelectedDoctor(doctor.name)}
                   className={`p-4 rounded-lg border-2 text-left transition-all ${
                     selectedDoctor === doctor.name
-<<<<<<< HEAD
                       ? 'border-[#1d4ed8] bg-[#1d4ed8]/10'
-=======
-                      ? 'border-blue-600 bg-blue-50'
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                       : 'border-gray-200 bg-white hover:border-gray-300'
                   }`}
                 >
@@ -247,11 +239,7 @@ export default function BookAppointmentContent({ onNotify }) {
                       onClick={() => setSelectedTime(time)}
                       className={`p-3 rounded-lg font-medium transition-all border-2 text-sm ${
                         selectedTime === time
-<<<<<<< HEAD
                           ? 'border-[#1d4ed8] bg-[#1d4ed8]/10 text-[#1d4ed8]'
-=======
-                          ? 'border-blue-600 bg-blue-50 text-blue-700'
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                           : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'
                       }`}
                     >
@@ -280,11 +268,7 @@ export default function BookAppointmentContent({ onNotify }) {
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Please provide any additional information or reason for your visit that may help us serve you better..."
-<<<<<<< HEAD
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] resize-none h-24 transition-all text-gray-900 bg-white"
-=======
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none h-24"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             />
           </div>
 
@@ -292,11 +276,7 @@ export default function BookAppointmentContent({ onNotify }) {
           <div className="flex gap-3 pt-4">
             <button
               type="submit"
-<<<<<<< HEAD
               className="flex-1 bg-[#1d4ed8] hover:bg-[#1e40af] text-white font-semibold py-3 rounded-lg transition-colors"
-=======
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               Confirm Appointment
             </button>
@@ -310,11 +290,7 @@ export default function BookAppointmentContent({ onNotify }) {
                 setCurrentMonth(new Date());
                 if (onNotify) onNotify('Form reset');
               }}
-<<<<<<< HEAD
               className="flex-1 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg transition-colors"
-=======
-              className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold py-3 rounded-lg transition-colors"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               Reset
             </button>

@@ -82,11 +82,7 @@ export default function MedicalHistoryContent() {
             <select
               value={filterDoctor}
               onChange={(e) => setFilterDoctor(e.target.value)}
-<<<<<<< HEAD
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-[#1d4ed8]"
-=======
-              className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               <option value="">All Doctors</option>
               {doctors.map((doctor) => (
@@ -104,11 +100,7 @@ export default function MedicalHistoryContent() {
               type="date"
               value={filterStartDate}
               onChange={(e) => setFilterStartDate(e.target.value)}
-<<<<<<< HEAD
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-[#1d4ed8]"
-=======
-              className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             />
           </div>
 
@@ -119,11 +111,7 @@ export default function MedicalHistoryContent() {
               type="date"
               value={filterEndDate}
               onChange={(e) => setFilterEndDate(e.target.value)}
-<<<<<<< HEAD
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-[#1d4ed8]"
-=======
-              className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             />
           </div>
         </div>
@@ -200,11 +188,7 @@ export default function MedicalHistoryContent() {
                                 title="Download"
                                 className="p-2 hover:bg-blue-50 rounded-lg transition-colors"
                               >
-<<<<<<< HEAD
                                 <svg className="w-4 h-4 text-[#1d4ed8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-=======
-                                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                 </svg>
                               </button>

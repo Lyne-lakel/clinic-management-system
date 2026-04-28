@@ -109,11 +109,7 @@ export default function LoginPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@clinic.com"
                   required
-<<<<<<< HEAD
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all"
-=======
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
               </div>
             </div>
@@ -131,11 +127,7 @@ export default function LoginPage() {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
                   required
-<<<<<<< HEAD
                   className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all"
-=======
-                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                 />
                 <button
                   type="button"
@@ -162,11 +154,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-<<<<<<< HEAD
               className="w-full bg-[#1d4ed8] hover:bg-[#1d4ed8] text-white font-medium px-4 py-3 rounded-lg transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
-=======
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               {loading ? "Signing in..." : "Sign In"}
             </button>
@@ -176,11 +164,7 @@ export default function LoginPage() {
           <div className="mt-6 text-center">
             <a
               href="#"
-<<<<<<< HEAD
               className="text-sm text-[#1d4ed8] hover:text-[#1d4ed8] hover:underline"
-=======
-              className="text-sm text-blue-600 hover:text-blue-700 hover:underline"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
             >
               Forgot your password?
             </a>

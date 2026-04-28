@@ -14,67 +14,10 @@
  * =============================================================================
  */
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { Search, CheckCircle, Phone, X, AlertTriangle, Clock } from "lucide-react";
 
 const API_RECEPTIONIST = "http://localhost:5000/api/receptionist";
-=======
-import { useState } from "react";
-import { Search, CheckCircle, Phone, X, AlertTriangle, Clock } from "lucide-react";
-
-// Initial requests data
-const initialRequests = [
-  { 
-    id: 101, 
-    patient: "Rachid Taleb", 
-    phone: "0555-111-222",
-    requestedDate: "2026-04-14", 
-    requestedTime: "10:00", 
-    reason: "First visit, back pain",
-    preferredDoctor: "Dr. Nouar",
-    submittedAt: "2026-04-13 08:30",
-    failedAttempts: 0,
-    status: "pending"
-  },
-  { 
-    id: 102, 
-    patient: "Nadia Hamidi", 
-    phone: "0555-333-444",
-    requestedDate: "2026-04-14", 
-    requestedTime: "14:30", 
-    reason: "Follow-up for diabetes",
-    preferredDoctor: "Dr. Bensalem",
-    submittedAt: "2026-04-13 09:15",
-    failedAttempts: 0,
-    status: "pending"
-  },
-  { 
-    id: 103, 
-    patient: "Sofiane Amar", 
-    phone: "0555-555-666",
-    requestedDate: "2026-04-15", 
-    requestedTime: "09:00", 
-    reason: "Annual check-up",
-    preferredDoctor: "Any",
-    submittedAt: "2026-04-13 10:00",
-    failedAttempts: 0,
-    status: "pending"
-  },
-  { 
-    id: 104, 
-    patient: "Kamel Boudiaf", 
-    phone: "0555-777-888",
-    requestedDate: "2026-04-16", 
-    requestedTime: "11:00", 
-    reason: "Chest pain follow-up",
-    preferredDoctor: "Dr. Khelifi",
-    submittedAt: "2026-04-12 14:30",
-    failedAttempts: 2,
-    status: "failed"
-  },
-];
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
 
 // Format date with weekday
 function formatDate(dateStr) {
@@ -83,7 +26,6 @@ function formatDate(dateStr) {
 }
 
 export default function RequestsPage() {
-<<<<<<< HEAD
   const [requests, setRequests] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [toasts, setToasts] = useState([]);
@@ -117,11 +59,6 @@ export default function RequestsPage() {
     };
     fetchRequests();
   }, []);
-=======
-  const [requests, setRequests] = useState(initialRequests);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [toasts, setToasts] = useState([]);
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
 
   // Toast notification
   const showToast = (message, type = "success") => {
@@ -132,7 +69,6 @@ export default function RequestsPage() {
     }, 3000);
   };
 
-<<<<<<< HEAD
   const playNotification = () => {
     try {
       new Audio('/sounds/success.mp3').play();
@@ -141,8 +77,6 @@ export default function RequestsPage() {
     }
   };
 
-=======
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   // Sort: pending first, then failed attempts at bottom
   const sortedRequests = [...requests]
     .filter(req => {
@@ -156,7 +90,6 @@ export default function RequestsPage() {
       return new Date(a.submittedAt) - new Date(b.submittedAt);
     });
 
-<<<<<<< HEAD
   // Confirm request - update status to Confirmed
   const handleConfirm = async (id) => {
     try {
@@ -173,15 +106,6 @@ export default function RequestsPage() {
       }
     } catch (err) {
       showToast(err.message, "error");
-=======
-  // Confirm request - moves to appointments
-  const handleConfirm = (id) => {
-    const request = requests.find(r => r.id === id);
-    if (request) {
-      // Remove from requests (would add to appointments in real app)
-      setRequests(prev => prev.filter(r => r.id !== id));
-      showToast(`Appointment confirmed for ${request.patient}`);
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
     }
   };
 
@@ -196,7 +120,6 @@ export default function RequestsPage() {
   };
 
   // Delete request permanently
-<<<<<<< HEAD
   const handleDelete = async (id) => {
     if (confirm("Are you sure you want to delete this request? This cannot be undone.")) {
       try {
@@ -206,12 +129,6 @@ export default function RequestsPage() {
       } catch (err) {
         showToast(err.message, "error");
       }
-=======
-  const handleDelete = (id) => {
-    if (confirm("Are you sure you want to delete this request? This cannot be undone.")) {
-      setRequests(prev => prev.filter(r => r.id !== id));
-      showToast("Request deleted", "warning");
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
     }
   };
 
@@ -219,12 +136,9 @@ export default function RequestsPage() {
   const pendingCount = requests.filter(r => r.status === "pending").length;
   const failedCount = requests.filter(r => r.status === "failed").length;
 
-<<<<<<< HEAD
   if (loading) return <div className="flex items-center justify-center p-8"><p className="text-muted-foreground">Loading requests...</p></div>;
   if (error) return <div className="text-red-500 p-4">Error: {error}</div>;
 
-=======
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   return (
     <div className="space-y-6 pb-20 md:pb-0">
       
@@ -241,11 +155,7 @@ export default function RequestsPage() {
           placeholder="Search by patient name or phone..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
           className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1d4ed8] focus:border-[#1d4ed8] outline-none transition-all bg-white text-gray-900"
-=======
-          className="w-full pl-10 pr-4 py-2 border border-input rounded-lg bg-background min-h-[44px]"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
         />
       </div>
 
@@ -355,11 +265,7 @@ export default function RequestsPage() {
               className={`px-4 py-3 rounded-lg shadow-lg text-white ${
                 toast.type === "success" ? "bg-emerald-600" :
                 toast.type === "warning" ? "bg-amber-600" :
-<<<<<<< HEAD
                 toast.type === "error" ? "bg-red-600" : "bg-[#1d4ed8]"
-=======
-                toast.type === "error" ? "bg-red-600" : "bg-blue-600"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
               }`}
             >
               {toast.message}

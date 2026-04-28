@@ -13,30 +13,9 @@
  * =============================================================================
  */
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { Search, ChevronLeft, ChevronRight, Calendar, Maximize2, Minimize2 } from "lucide-react";
 import { API_RECEPTIONIST } from "@/config/api";
-=======
-import { useState } from "react";
-import { Search, ChevronLeft, ChevronRight, Calendar, Maximize2, Minimize2 } from "lucide-react";
-
-// All appointments data
-const allAppointments = [
-  { id: 1, date: "2026-04-13", time: "09:00", patient: "Ahmed Benali", doctor: "Dr. Nouar", type: "Consultation" },
-  { id: 2, date: "2026-04-13", time: "09:30", patient: "Fatima Zohra", doctor: "Dr. Bensalem", type: "Follow-up" },
-  { id: 3, date: "2026-04-13", time: "10:00", patient: "Karim Said", doctor: "Dr. Nouar", type: "Consultation" },
-  { id: 4, date: "2026-04-14", time: "10:30", patient: "Lydia Mansour", doctor: "Dr. Khelifi", type: "Check-up" },
-  { id: 5, date: "2026-04-14", time: "11:00", patient: "Omar Khelif", doctor: "Dr. Bensalem", type: "Follow-up" },
-  { id: 6, date: "2026-04-15", time: "11:30", patient: "Samira Hadj", doctor: "Dr. Nouar", type: "Consultation" },
-  { id: 7, date: "2026-04-16", time: "14:00", patient: "Yacine Bouali", doctor: "Dr. Khelifi", type: "Check-up" },
-  { id: 8, date: "2026-04-17", time: "14:30", patient: "Amina Cherif", doctor: "Dr. Bensalem", type: "Consultation" },
-  { id: 9, date: "2026-04-18", time: "09:00", patient: "Rachid Taleb", doctor: "Dr. Nouar", type: "Follow-up" },
-  { id: 10, date: "2026-04-19", time: "10:00", patient: "Nadia Hamidi", doctor: "Dr. Khelifi", type: "Check-up" },
-];
-
-const doctors = ["All Doctors", "Dr. Nouar", "Dr. Bensalem", "Dr. Khelifi"];
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
 
 // Helper: Get week days starting from a given date
 function getWeekDays(startDate) {
@@ -83,62 +62,18 @@ function formatDisplayDate(date) {
 }
 
 export default function AppointmentsPage() {
-<<<<<<< HEAD
   const [appointments, setAppointments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
-=======
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDoctor, setSelectedDoctor] = useState("All Doctors");
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [isMonthView, setIsMonthView] = useState(false);
-<<<<<<< HEAD
   const [doctors, setDoctors] = useState(["All Doctors"]);
 
-  // =========================================================================
-  // FETCH APPOINTMENTS AND DOCTORS
-  // =========================================================================
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        
-        // Fetch all appointments
-        const aptRes = await fetch(`${API_RECEPTIONIST}/appointments?limit=1000`);
-        const aptData = await aptRes.json();
-        
-        // Transform appointments to display format
-        const transformed = (aptData.data || []).map(apt => ({
-          id: apt._id,
-          date: apt.date.split("T")[0],
-          time: new Date(apt.date).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false }),
-          patient: apt.patientName,
-          doctor: apt.doctorName,
-          type: apt.reason || "Consultation"
-        }));
-        
-        setAppointments(transformed);
-        
-        // Extract unique doctors
-        const uniqueDoctors = ["All Doctors", ...new Set(transformed.map(a => a.doctor))];
-        setDoctors(uniqueDoctors);
-        
-        setLoading(false);
-      } catch (err) {
-        console.error("[Appointments] Error fetching data:", err);
-        setError(err.message);
-        setLoading(false);
-      }
-    };
-    
-    fetchData();
-  }, []);
-=======
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
-
+  // ==================================================================
   // Get days for current view
   const weekDays = getWeekDays(currentDate);
   const monthDays = getMonthDays(currentDate.getFullYear(), currentDate.getMonth());
@@ -165,11 +100,7 @@ export default function AppointmentsPage() {
   };
 
   // Filter appointments
-<<<<<<< HEAD
   const filteredAppointments = appointments.filter((apt) => {
-=======
-  const filteredAppointments = allAppointments.filter((apt) => {
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
     const matchesSearch = 
       apt.patient.toLowerCase().includes(searchQuery.toLowerCase()) ||
       apt.doctor.toLowerCase().includes(searchQuery.toLowerCase());
@@ -182,11 +113,7 @@ export default function AppointmentsPage() {
   const getAppointmentCount = (date) => {
     if (!date) return 0;
     const dateKey = formatDateKey(date);
-<<<<<<< HEAD
     return appointments.filter(apt => {
-=======
-    return allAppointments.filter(apt => {
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
       const matchesDoctor = selectedDoctor === "All Doctors" || apt.doctor === selectedDoctor;
       const matchesSearch = searchQuery === "" || 
         apt.patient.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -289,11 +216,7 @@ export default function AppointmentsPage() {
                     }`}
                   >
                     <div className="flex items-center justify-between">
-<<<<<<< HEAD
                       <span className={`font-medium ${isToday(day) ? "text-[#1d4ed8]" : "text-foreground"}`}>
-=======
-                      <span className={`font-medium ${isToday(day) ? "text-blue-600" : "text-foreground"}`}>
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                         {formatDisplayDate(day)}
                       </span>
                       {count > 0 && (
@@ -332,11 +255,7 @@ export default function AppointmentsPage() {
                         isSelected(day)
                           ? "bg-emerald-500 text-white"
                           : isToday(day)
-<<<<<<< HEAD
                           ? "bg-blue-100 text-[#1d4ed8] dark:bg-blue-900/30 dark:text-blue-400"
-=======
-                          ? "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400"
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                           : "hover:bg-muted text-foreground"
                       }`}
                     >

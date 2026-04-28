@@ -70,11 +70,7 @@ export default function DashboardContent() {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                   <div className="bg-blue-50 px-4 py-2.5 rounded-lg text-center">
-<<<<<<< HEAD
                     <p className="text-base text-[#1d4ed8] font-semibold">{countdowns[apt.id]}</p>
-=======
-                    <p className="text-base text-blue-600 font-semibold">{countdowns[apt.id]}</p>
->>>>>>> 71c599f5aae482780c43c836ebac595de4d47a83
                   </div>
                   <div className="flex gap-2">
                     <button className="px-4 py-2.5 text-base font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors">
